@@ -4,3 +4,4 @@ console.log(result)
 const resulttwo  = lastdigit.padEnd(16, '*')
 console.log(resulttwo)
 
+
