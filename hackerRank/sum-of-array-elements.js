@@ -1,6 +1,13 @@
-let sum =0
-let arr = [1, 2, 3, 4, 5]
-for(i=0; i<arr.co; i++){
-  sum = sum + arr[i]
-  console.log(sum)
+function simpleArraySum(ar) {
+  // Write your code here
+  let sum = 0
+  for(let i = 0; i < ar.length; i++){
+      sum = sum + ar[i]
+      console.log(sum)
+  }
+  
 }
+
+const array = [1, 2, 3, 4, 5]
+const result = simpleArraySum(array)
+console.log(result)
