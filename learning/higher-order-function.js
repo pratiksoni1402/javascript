@@ -10,7 +10,6 @@ function a(b){  //a is higher order function
   b()
 }
 
-
 // Anonymous function 
 a(function sayHi(){   //sayHi() is a callback function
   console.log('Hiiiiiiii')
