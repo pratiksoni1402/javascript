@@ -8,5 +8,6 @@
 // clearInterval(2)
 
 setTimeout(function() {
-  console.log('Hiii');
+  console.log('Hiii'); 
+  
 }, 4000)
