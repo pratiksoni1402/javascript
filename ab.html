@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Please fill out the survey below:</p>
+
+  <form id="survey-form">
+    <label id="name-label" for="name">Name:</label>
+    <input id="name" type="text" placeholder="Enter your name" required>
+
+    <label id="email-label" for="email">Email:</label>
+    <input id="email" type="email" placeholder="Enter your email" required>
+
+    <label id="number-label" for="number">Age:</label>
+    <input id="number" type="number" placeholder="Enter your age" min="1" max="120">
+
+    <!-- Select Menu -->
+    <label for="dropdown">Which option best describes your current role?</label>
+    <select id="dropdown" name="role">
+      <option value="student" disabled>Select an option</option>
+      <option value="full-time-job">Challenges</option>
+      <option value="full-time-job">Project Community</option>
+      <option value="full-time-job">Full Time Job</option>
+    </select>
+    <!-- Select Menu End-->
+
+    <!-- Recommandation Fields -->
+    <p>How likely are you to recommend this product?</p>
+    <div>
+
+      <input type="radio" name="recommend" value="definitely" />
+      <label class='radio-label'>Definitely</label>
+    </div>
+    <div>
+      <label class='radio-label'><input type="radio" name="recommend" value="maybe" /> Maybe</label>
+    </div>
+    <div>
+      <label class='radio-label'><input type="radio" name="recommend" value="not-sure" /> Not Sure</label>
+    </div>
+    <!-- Recommandation Fields End-->
+
+    <p>What do you like most about our product? (Check all that apply)</p>
+    <label><input type="checkbox" name="feature" value="design" /> Design</label>
+    <label><input type="checkbox" name="feature" value="performance"> Performance</label>
+    <label><input type="checkbox" name="feature" value="usability"> Usability</label>
+
+    <label for="comments">Any comments or suggestions?</label>
+    <textarea id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
