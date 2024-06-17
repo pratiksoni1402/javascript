@@ -5,3 +5,23 @@
   font-size: 18px;
   font-weight: 900;
 } */
+ body{
+  background-color: #3c2f27;
+ }
+
+ h1{
+  color: white;
+ }
+
+.card-1{
+  background-color: antiquewhite;
+  width: 300px;
+  height: 300px;
+  font-size: 92px;
+  border-radius: 20px;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

@@ -1,4 +1,4 @@
-const allLinks = document.querySelectorAll('a')
+  const allLinks = document.querySelectorAll('a')
 console.log("All links", allLinks)
 //! Change color one by one
 allLinks[0].style.color = 'teal'
