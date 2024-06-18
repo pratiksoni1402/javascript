@@ -19,7 +19,8 @@
   height: 300px;
   font-size: 92px;
   border-radius: 20px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
+  color: #3c2f27;
   display: flex;
   justify-content: center;
   align-items: center;

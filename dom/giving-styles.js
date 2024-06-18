@@ -20,7 +20,7 @@ for (let link of allLinks) {
   font-size: 18px;
   font-weight: 900;`
 
-  //! This wil set the new class attribute with value of greenLink
+  //! This will set the new class attribute with value of greenLink
   link.setAttribute('class', 'greenlink')
 
   //! By this way you can add multiple class names
@@ -31,4 +31,7 @@ for (let link of allLinks) {
 
   //! If the class exist then it will be removed and if not exist then it will be added
   link.classList.toggle('aaaa')
+
+  //
+  link
 }
