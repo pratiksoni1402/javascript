@@ -1,6 +1,6 @@
 h1 = document.querySelector('h1')
 function ChangetheColor() {
-  // document.getElementById('heading').style.backgroundColor = 'teal';
+  document.getElementById('heading').style.backgroundColor = 'teal';
   console.log("Hiiiii")
 }
 
