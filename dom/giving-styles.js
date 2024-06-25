@@ -1,4 +1,4 @@
-  const allLinks = document.querySelectorAll('a')
+const allLinks = document.querySelectorAll('a')
 console.log("All links", allLinks)
 //! Change color one by one
 allLinks[0].style.color = 'teal'
@@ -20,8 +20,6 @@ for (let link of allLinks) {
   font-size: 18px;
   font-weight: 900;`
 
-  //! This will set the new class attribute with value of greenLink
-  link.setAttribute('class', 'greenlink')
 
   //! By this way you can add multiple class names
   link.classList.add('trail', 'aaaa')
@@ -29,9 +27,11 @@ for (let link of allLinks) {
   //! By this way you can remove single or multiple class names
   link.classList.remove('aaaa')
 
+  //! This will set the new class attribute with value of greenLink
+  link.setAttribute('class', 'greenlink')
+
   //! If the class exist then it will be removed and if not exist then it will be added
   link.classList.toggle('aaaa')
 
-  //
-  link
+    
 }

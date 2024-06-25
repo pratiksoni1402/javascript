@@ -6,5 +6,5 @@ function ChangetheColor() {
 
 h1.addEventListener('click', ChangetheColor)
 h1.addEventListener('mouseover', function () {
-  console.log('This is on hover')
+  console.log('This is on hover') 
 })
