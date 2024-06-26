@@ -8,3 +8,4 @@ console.log("This is container", container)
 
 //! This will copy the element to desired location cloneNode(true) this will enable deep clone ( text will also be copied), cloneNode() only atribute and element will be copied not text
 container.appendChild(h6.cloneNode(true))
+

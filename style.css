@@ -5,6 +5,7 @@
   font-size: 18px;
   font-weight: 900;
 } */
+
  body{
   background-color: #d5fdf9;
  }
@@ -24,15 +25,18 @@
   justify-content: center;
   align-items: center;
 }
+
 .card:hover{
   background-color: rgb(76, 130, 76);
   cursor: pointer;
 }
+
 .container{
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .green{
   width:300px;
   height: 300px;
@@ -41,6 +45,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .green .pink{
   width:200px;
   height: 200px;
@@ -55,3 +60,4 @@
   height: 100px;
   background-color:blue;
 }
+
