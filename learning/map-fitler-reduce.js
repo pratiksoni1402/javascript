@@ -70,4 +70,4 @@ const nameCount = names.reduce((accumulator, currentValue) => {
   return accumulator
 }, {})
 
-console.log("This is name count", nameCount)
+console.log("This is name count", nameCount);
