@@ -1,0 +1,2242 @@
+@extends('global_setting.image_layout')
+
+@section('page-content')
+    <!--begin:::Tab pane-->
+    <div class="tab-pane fade show active" id="kt_site_image_size" role="tabpanel">
+        <!--begin::Timeline-->
+        <div class="card">
+            <!--begin::Card body-->
+            <div class="card-body">
+                <table class="table align-middle table-row-dashed fs-6 gy-4" id="kt_banner_table">
+                    <thead>
+                        <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+
+                            <th class="min-w-125px">Title</th>
+                            <th class="min-w-125px">Desktop (W x H)</th>
+                            <th class="min-w-125px">Mobile (W x H)</th>
+                            <th class=" min-w-70px">Image Format</th>
+                            <th class=" min-w-70px">Display Position in Front</th>
+                        </tr>
+                    </thead>
+                    <!--begin::Table body-->
+                    <tbody class="fw-semibold text-gray-600">
+
+                        {{-- ------------------ Homepage Image Size Info Start --------------- --}}
+
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="home_page">Home Page</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <span>Main Banner</span>
+                            </th>
+                            <th>2000 x 700</th>
+                            <th>1125 x 1500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/main-banner.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Category Images</th>
+                            <th>528 x 600</th>
+                            <th>528 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/category-image.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Deal Banner</th>
+                            <th>3024 x 480</th>
+                            <th>800 x 260</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/deal-banner.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Natural Diamond Rings</th>
+                            <th>864 x 760</th>
+                            <th>864 x 760</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/natural-diamond.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Lab Grown Diamond Rings</th>
+                            <th>864 x 760</th>
+                            <th>864 x 760</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/lab-grown-diamond.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Images</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Handcrafted Fine Jewelry</th>
+                            <th>1536 x 490</th>
+                            <th>800 x 700</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/handcrafting.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Our Favorites</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/our-favorites.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond and Jewelry Education</th>
+                            <th>1472 x 398</th>
+                            <th>800 x 525</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/homepage/jewelry-education.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Homepage Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Product Listing Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="product_listing_images">Product Listing
+                                    Images</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Styles</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/styles.png" target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Product Type</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                {{-- <a href="/images/site-image-info/styles.png" target="blank" class="">View</a> --}}
+                                N/A
+                            </th>
+                        </tr>
+                        {{-- ------------------ Product Listing Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Product Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="product_images">Product Images</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Product Large</th>
+                            <th>2000 x 2000</th>
+                            <th>N/A</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/product-images/product-large.webp" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Product Medium</th>
+                            <th>1000 x 1000</th>
+                            <th>N/A</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/product-images/product-medium.webp" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Product Thumb</th>
+                            <th>600 x 600</th>
+                            <th>N/A</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/product-images/product-thumb.webp" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Product Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Deal Page Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="deal_page">Deal Page</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Deal Banner</th>
+                            <th>1400 x 200</th>
+                            <th>800 x 260</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/deals/deal-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Deal Page Image Size Info Start --------------- --}}
+
+                        {{-- ------------------ Engagement Rings Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="engagement_rings">Engagement Rings</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 598</th>
+                            <th>800 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop By Style</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/shop-by-style.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Ready to Ship</th>
+                            <th>464 x 498</th>
+                            <th>646 x 498</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/category-image.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Images</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gemstone Rings</th>
+                            <th>694 x 694</th>
+                            <th>694 x 694</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/gemstone-rings.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Styles</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/top-trending-styles.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Jewelry Education</th>
+                            <th>690 x 692</th>
+                            <th>690 x 692</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/jewelry-education.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>More Way to Shop</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/engagement-rings/more-ways-to-shop.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Engagement Rings Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Wedding Rings Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="wedding_rings">Wedding Rings</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 598</th>
+                            <th>800 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop By Style</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/shop-by-style.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Lab Grown Wedding Rings & Sets</th>
+                            <th>1472 x 398</th>
+                            <th>840 x 398</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/Wedding-rings-and-sets.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Styles</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/top-trending-style.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gemstone Wedding Rings</th>
+                            <th>800 x 1000</th>
+                            <th>800 x 1000</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/wedding-gemstone-rings.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Wedding Ring Education Guides</th>
+                            <th>1472 x 398</th>
+                            <th>840 x 398</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-rings/wedding-ring-eduction-guide.png"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Wedding Rings Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamonds Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="diamonds">Diamonds</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 598</th>
+                            <th>800 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Images</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>It Start With A Wish</th>
+                            <th>1400 x 628</th>
+                            <th>840 x 542</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/starts-with-a-wish.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Studs and Pendants</th>
+                            <th>500 x 500</th>
+                            <th>692 x 680</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/diamond-studs.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>True Wish Lab Diamonds</th>
+                            <th>1472 x 398</th>
+                            <th>840 x 398</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/true-wish-lab-diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Certificates</th>
+                            <th>692 x 680</th>
+                            <th>692 x 680</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/diamond-certificate.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Diamond Jewelry</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/trending-diamond-jewelry.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Education</th>
+                            <th>456 x 480</th>
+                            <th>456 x 480</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamonds/diamond-education.png" target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Diamonds Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Gemstone Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="gemstones">Gemstones</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 709</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Rings By Gemstone</th>
+                            <th>1000 x 1000</th>
+                            <th>600 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/shop-ring-by-gemstone.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Gemstone Jewelry</th>
+                            <th>280 x 398</th>
+                            <th>280 x 398</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/shop-gemstone-jewelry.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Moissanite Jewelry</th>
+                            <th>1525 x 483</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/moissanite-jewelry.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Birthstone And Gemstone Jewelry Gifts</th>
+                            <th>1525 x 430</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/birthstone-gemstone-jewelry.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Trending Gemstone Jewelry</th>
+                            <th>1000 x 1000</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/trending-gemstone-jewelry.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gemstone Education</th>
+                            <th>1525 x 429</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gemstones/gemstone-education.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        </tr>
+                        {{-- ------------------ Gemstone Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Jewelry Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="jewelry">Jewelry</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 709</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop By Category</th>
+                            <th>528 x 600</th>
+                            <th>528 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/shop-by-category.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Design Your Own Jewelry</th>
+                            <th>1512 x 493</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/design-your-own-jewelry.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Styles</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/top-trending-styles.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop By Gender</th>
+                            <th>694 x 694</th>
+                            <th>694 x 694</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/shop-by-gender.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>More Ways To Shop</th>
+                            <th>2000 x 2000</th>
+                            <th>1000 x 1000</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/more-ways-to-shop.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>How to Clean Your Jewelry</th>
+                            <th>1525 x 425</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/jewelry/how-to-clean-jewelry.png" target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Jewelry Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Gifts Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="gifts">Gifts</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>754 x 558</th>
+                            <th>754 x 558</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Jewelry Gift Collections</th>
+                            <th>600 x 600</th>
+                            <th>600 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/top-jewelry-gift-collection.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gifts</th>
+                            <th>1512 x 493</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/gifts.png" target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Most Popular Gifts</th>
+                            <th>1000 x 1000</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/most-popular-gifts.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gift By Price</th>
+                            <th>464 x 498</th>
+                            <th>464 x 455</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/gifts-by-price.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Anniversary Gifts By - Year</th>
+                            <th>2000 x 2000</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/anniversary-gift-by-year.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Jewelry Gifts by Occasion</th>
+                            <th>1512 x 494</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/jewelry-gift-by-ocassion.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Design Your Own Jewelry Gift</th>
+                            <th>464 x 498</th>
+                            <th>464 x 498</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/gifts/design-your-own-jewelry-gift.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Gifts Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Earrings Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="earrings">Earrings</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 709</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>New Arrivals</th>
+                            <th>1000 x 1000</th>
+                            <th>600 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/new-arrivals.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Learn About Natural Vs. Lab Diamonds</th>
+                            <th>464 x 498</th>
+                            <th>464 x 498</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/natural-diamond-studs.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/diamonds.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Color Diamond Studs</th>
+                            <th>464 x 498</th>
+                            <th>464 x 498</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/earrings.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Genuine Gemstone Earrings</th>
+                            <th>1920 x 608</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/gemstone-earrings.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Certificate</th>
+                            <th>694 x 694</th>
+                            <th>694 x 694</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/diamond-certificate.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Collection</th>
+                            <th>500 x 500 </th>
+                            <th>600 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/top-trending-collection.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Earrings Education Guides</th>
+                            <th>1416 x 398</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/earrings/earring-education.png" target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Earrings Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Rings Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="rings">Rings</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 558</th>
+                            <th>1512 x 558</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop By Style</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/shop-by-style.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Design Your Own Ring</th>
+                            <th>694 x 387</th>
+                            <th>694 x 387</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/design-your-own-ring.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/diamonds.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>All Gemstone</th>
+                            <th>464 x 498</th>
+                            <th>457 x 458</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/gemstone-rings.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Rings</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/top-trending-rings.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Education</th>
+                            <th>692 x 500</th>
+                            <th>692 x 500</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/diamond-engagement-education.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Trending Collection</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/rings/top-trending-collection.png"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Rings Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Necklaces Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="necklaces">Necklaces</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 558</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Design Your Own</th>
+                            <th>1416 x 493</th>
+                            <th>1080 x 493</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/design-your-own.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>New Arrivals</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/new-arrivals.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Color Diamond Pendants</th>
+                            <th>464 x 498</th>
+                            <th>509 x 498</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/diamond-pendants.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Genuine Gemstone Necklaces</th>
+                            <th>1920 x 505</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/gemstone-necklace.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Certified Pendants</th>
+                            <th>694 x 694</th>
+                            <th>694 x 694</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/certified-pendants.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>More Ways To Shop</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/more-ways-to-shop.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Necklaces Education Guides</th>
+                            <th>1416 x 398</th>
+                            <th>1080 x 493</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/necklaces/necklace-education.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Necklaces Image Size Info End --------------- --}}
+                        {{-- ------------------ Bracelets Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="bracelets">Bracelets</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 396</th>
+                            <th>1080 x 627</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/bracelets/main-banner.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Tennis Bracelets</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/bracelets/diamond-tennis-bracelets.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Le Desir Collection</th>
+                            <th>355 x 350</th>
+                            <th>355 x 350</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/bracelets/le-desire-collection.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Education</th>
+                            <th>569 x 266</th>
+                            <th>569 x 266</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/bracelets/diamond-education.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Top Picks</th>
+                            <th>500 x 500</th>
+                            <th>500 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/bracelets/top-picks.png" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Bracelets Image Size Info End --------------- --}}
+                        {{-- ------------------ Lab Grown Diamonds Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds">Lab Grown Diamonds</span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 598</th>
+                            <th>800 x 500</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/new-main-banner.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- <tr>
+                      <th>What Is Lab Grown Diamond ?</th>
+                      <th>961 x 961</th>
+                      <th>961 x 961</th>
+                      <th>.JPG</th>
+                      <th>
+                        <a href="/images/site-image-info/lab-grown-diamonds/what-is-lab-grown-diamond.png" target="blank" class="">View</a>
+                      </th>
+                    </tr> --}}
+
+                        <tr>
+                            <th>Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/diamonds.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>What Are Lab Grown Diamonds?
+                            </th>
+                            <th>450 x 400</th>
+                            <th>840 x 400(Tab)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/lab-grown-diamond-image-1.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>How Are Lab Grown Diamonds Made?</th>
+                            <th>450 x 400</th>
+                            <th>840 x 400(Tab)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/lab-grown-diamonds.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Lab Grown Diamonds Vs. Natural Diamonds</th>
+                            <th>450 x 500</th>
+                            <th>840 x 400(Tab)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/lab-grown-vs-natural.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Lab Grown Diamonds Vs. Diamond Simulants</th>
+                            <th>450 x 500</th>
+                            <th>840 x 400(Tab)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/lab-grown-diamonds-two.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Lab Diamond Jewelry By Category</th>
+                            <th>270 x 350</th>
+                            <th>270 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lab-grown-diamonds/shop-lab-diamonds-jewelry-by-category.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Lab Grown Diamonds Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Virtual Appointment Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Virtual Appointment
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1472 x 398</th>
+                            <th>720 x 398</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/virtual-appointment/main-banner.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Schedule an Appointment</th>
+                            <th>427 x 427</th>
+                            <th>427 x 427</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/virtual-appointment/schedule-appointment.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Your Virtual Jewelry Consultation</th>
+                            <th>149 x 149</th>
+                            <th>149 x 149</th>
+                            <th>.PNG</th>
+                            <th>
+                                <a href="/images/site-image-info/virtual-appointment/virtual-consultation.png"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Making Your Appointment</th>
+                            <th>649 x 479</th>
+                            <th>649 x 479</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/virtual-appointment/make-your-appointment.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>During Your Appointment</th>
+                            <th>649 x 479</th>
+                            <th>649 x 479</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/virtual-appointment/during-your-appointment.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Virtual Appointment Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Carat Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Carat
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 898</th>
+                            <th>768 x 480</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/main-banner.jpg" target="blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Interactive Section</th>
+                            <th>350 x 350 (each)</th>
+                            <th>350 x 350 (each)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/carat-scale-interactive.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Diamonds </th>
+                            <th>160 x 160</th>
+                            <th>160 x 160</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/diamond-size.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gemstone Carat Versus Diamond Carat</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/gemstone-vs-diamond.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Choosing the Right Carat Weight</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/carat-weight.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Diamonds By Shape</th>
+                            <th>528 x 600</th>
+                            <th>528 x 600</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/shop-by-shape.jpg" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Engagement Rings by Carat</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-carat/shop-by-carat.jpg" target="blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Diamond Carat Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Clarity Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Clarity
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 898</th>
+                            <th>768 x 480</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/main-banner.jpg" target="blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Interactive Section</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/clarity-scale-interactive.png"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Diamond Clarity Scale (Single Diamond)</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/single-diamond.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Clarity Scale (Double Diamond)</th>
+                            <th>550 x 220</th>
+                            <th>350 x 150</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/dual-diamond.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Clarity Chart</th>
+                            <th>850 x 250</th>
+                            <th>850 x 250</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/diamond-clarity-chart.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>5 Clarity Grading Factors</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/grading-factor.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>How Important Is Diamond Clarity?</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-clarity/diamond-clarity-importance.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Diamond Clarity Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Education Guide Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Education Guide
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 898</th>
+                            <th>768 x 480</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/main-banner.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>What is a Diamond?</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/what-is-diamond.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Types of Diamonds</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/types-of-diamond.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Cut Interactive Section</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/cut-interactive.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop by Diamond Cut</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/diamond-cut.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Color Interactive Section</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/color-interactive.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Shop by Diamond Color</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/diamond-color.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Clarity Interactive Section</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/clarity-interactive.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Shop by Diamond Clarity</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/diamond-clarity.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Carat Interactive Section</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/carat-interactive.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Shop Engagement Rings by Carat</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/carat.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Shape</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/diamond-shape.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Diamonds By Shape</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/shop-by-shape.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Polish & Symmetry</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/diamond-polish.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Fluorescence</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/fluerosence.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Hardness</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-education-guide/hardness.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Diamond Education Guide Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Color Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Color
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 898</th>
+                            <th>768 x 480</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/main-banner.jpg" target="blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Interactive Section</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/color-scale-interactive.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Diamond Color Grading</th>
+                            <th>920 x 220</th>
+                            <th>770 x 280</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/color-scale.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Diamond Color Grading</th>
+                            <th>830 x 180</th>
+                            <th>770 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/color.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Colorless Diamond Grades</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/diamond-grade.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>D Color</th>
+                            <th>330 x 150</th>
+                            <th>330 x 150</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/d-color.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Near Colorless Diamond Grades</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/diamond-grade.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Fancy Color Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/fancy-color.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Fluorescence</th>
+                            <th>530 x 280</th>
+                            <th>380 x 320</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-color/fluroesence.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Diamond Color Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Cut Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Cut
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1512 x 898</th>
+                            <th>768 x 480</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/main-banner.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Interactive Section</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/interactive-section-image.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Diamond Cut Grading System</th>
+                            <th>920 x 220</th>
+                            <th>780 x 250</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/grading-system.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Why Is Cut Important?</th>
+                            <th>830 x 180</th>
+                            <th>420 x 460</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/diamond-cut-chart.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Let’s Explore the Diamonds Anatomy</th>
+                            <th>480 x 330</th>
+                            <th>420 x 460</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/diamond-anatony.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Types of Diamond Cuts</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/type-of-diamond-cuts.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Cut Grades</th>
+                            <th>250 x 250 (each)</th>
+                            <th>250 x 250 (each)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/cut-grades.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Shape</th>
+                            <th>450 x 400</th>
+                            <th>450 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/diamond-shape.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Shop Diamonds by Shape</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.SVG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-cut/shop-by-shape.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Diamond Cut Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Our Story Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Our Story
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 980</th>
+                            <th>1920 x 980</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/our-story/main-banner.jpg" target="_blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Our Promise</th>
+                            <th>980 x 370</th>
+                            <th>980 x 390</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/our-story/our-promise.png" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Our Mission</th>
+                            <th>410 x 270</th>
+                            <th>235 x 155</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/our-story/our-mission.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Design & Craftmanship</th>
+                            <th>1250 x 320</th>
+                            <th>730 x 190</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/our-story/craftmanship.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Our Story Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Handcrafted in USA Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Handcrafted in USA
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 700</th>
+                            <th>1920 x 700</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/handcrafted-in-usa/main-banner.jpg"
+                                    target="_blank">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>The Perfect Two</th>
+                            <th>900 x 520</th>
+                            <th>520 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/handcrafted-in-usa/perfect-two.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>A Place Where Fasion is Born</th>
+                            <th>700 x 380</th>
+                            <th>390 x 210</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/handcrafted-in-usa/fashion-born.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Handcrafted in USA Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Military Discount Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Military Discount
+                                </span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 800</th>
+                            <th>770 x 320</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/military-discount/main-banner.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Military Discount Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Lifetime Warranty & Repairs Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds">Lifetime Warranty &
+                                    Repairs
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>460 x 610</th>
+                            <th>460 x 610</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lifetime-repair/main-banner.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Get Inspired By Our Top Collection</th>
+                            <th>450 x 450</th>
+                            <th>250 x 250</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/lifetime-repair/collection.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Lifetime Warranty & Repairs Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Customer Stories Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds">Customer Stories
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1920 x 396</th>
+                            <th>730 x 400</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/customer-stories/main-banner.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>In Spotlight</th>
+                            <th>700 x 450</th>
+                            <th>730 x 450</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/customer-stories/in-spotlight.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Memories</th>
+                            <th>350 x 350</th>
+                            <th>350 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/customer-stories/memories.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ Customer Stories Image Size Info End --------------- --}}
+
+                        {{-- ------------------ How To Buy Engagement Ring Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds">How To Buy Engagement Ring
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1400 x 400</th>
+                            <th>730 x 320</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/main-banner.jpg"
+                                    class="" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Find Her Style</th>
+                            <th>1920 x 490</th>
+                            <th>730 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/find-her-style.jpg"
+                                    class="" target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Select a Ring</th>
+                            <th>700 x 490</th>
+                            <th>360 x 320</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/select-a-ring.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Choose a Diamond</th>
+                            <th>700 x 490</th>
+                            <th>360 x 350</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/choose-a-diamond.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Plan your Proposal</th>
+                            <th>770 x 250</th>
+                            <th>730 x 370</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/plan-your-proposal.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+                        {{-- ------------------ How To Buy Engagement Ring Image Size Info End --------------- --}}
+
+                        {{-- ------------------ Diamond Shape Guide Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Diamond Shape Guide
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamonds</th>
+                            <th>200 x 200</th>
+                            <th>200 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-shape/shapes.jpg" class=""
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Diamond Cut</th>
+                            <th>200 x 200 (each)</th>
+                            <th>200 x 200 (each)</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-shape/diamonds.jpg" class=""
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Cut Ring</th>
+                            <th>570 x 380</th>
+                            <th>370 x 250</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-shape/ring.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gemstone Rings</th>
+                            <th>700 x 450</th>
+                            <th>370 x 210</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/diamond-shape/gemstone-rings.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Diamond Shape Guide Image Size Info End --------------- --}}
+
+                        {{-- ------------------ About Wedding Rings Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> About Wedding Rings
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1400 x 315</th>
+                            <th>730 x 295</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/wedding-ring-styles/main-banner.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Rings</th>
+                            <th>455 x 300</th>
+                            <th>360 x 240</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/how-to-buy-engagement-ring/find-her-style.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ About Wedding Rings Size Info End --------------- --}}
+                        {{-- ------------------ Anniversary Gifts Image Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Anniversary Gifts
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1400 x 300</th>
+                            <th>730 x 270</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/main-banner.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Traditional Gifts by Year</th>
+                            <th>400 x 200</th>
+                            <th>400 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/traditional-gifts.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Anniversary Collection</th>
+                            <th>340 x 370</th>
+                            <th>180 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/anniversary-collection.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Anniversary Collection</th>
+                            <th>690 x 370</th>
+                            <th>360 x 190</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/anniversary-large.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Non Traditional Anniversary Collection</th>
+                            <th>300 x 300</th>
+                            <th>300 x 300</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/non-traditional-gift.jpg"
+                                    target="blank" class="">View</a>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Gift by Gender</th>
+                            <th>720 x 390</th>
+                            <th>380 x 200</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/anniversary-gifts/gifts-by-gender.jpg"
+                                    target="blank">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Anniversary Rings Size Info End --------------- --}}
+
+                        {{-- ------------------ Ring Size Guide Size Info Start --------------- --}}
+                        <tr>
+                            <th>
+                                <span class="badge badge-light-warning" id="lab_grown_diamonds"> Ring Size Guide
+                                </span>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>Main Banner</th>
+                            <th>1500 x 2300</th>
+                            <th>N/A</th>
+                            <th>.JPG</th>
+                            <th>
+                                <a href="/images/site-image-info/ring-size-guide/find-your-ring-size.jpg" target="blank"
+                                    class="">View</a>
+                            </th>
+                        </tr>
+
+                        {{-- ------------------ Ring Size Guide Size Info End --------------- --}}
+                    </tbody>
+                    <!--end::Table body-->
+                </table>
+            </div>
+            <!--end::Card body-->
+        </div>
+        <!--end::Timeline-->
+    </div>
+    <!--end:::Tab pane-->
+@endsection
+
