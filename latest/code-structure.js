@@ -15,7 +15,7 @@ console.log("Hello");
 [1, 2].forEach(console.log);
 // The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
 //
-//   If we run this code, only the first Hello shows (and there’s an error, you may need to open the console to see it). There are no numbers any more.
+//   If we run this code, only the first Hello shows (and there’s an error, you may need to open the console to see it). There are no numbers anymore.
 //
 //   That’s because JavaScript does not assume a semicolon before square brackets [...]. So, the code in the last example is treated as a single statement.
 //
