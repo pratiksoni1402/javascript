@@ -2,7 +2,7 @@
 NINJA SLAYGROUND 2.0 : 21 Day Coding Challenge
 Problem
 Submissions
- Switch Case statement
+Switch Case statement
 Easy
 0/40
 Average time to solve is 15m
@@ -20,7 +20,7 @@ Switch-case is one of the ways to implement them.
 
 In a menu-driven program, the user is given a set of choices of things to do (the menu) and then is asked to select a menu item.
 
-
+""
 
 There are 2 choices in the menu:
 
