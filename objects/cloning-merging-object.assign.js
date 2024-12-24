@@ -13,7 +13,7 @@ for(let key in user){
 
 console.log("cloned",cloned)
 
-// Method 2
+ // Method 2
 //If the copied property name already exists, it gets overwritten:
 
 let target = {
