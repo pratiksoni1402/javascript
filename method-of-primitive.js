@@ -1,2 +1,9 @@
-let z = 100_000_000
-console.log(z)
+let user = {
+  name: 'pratik',
+  greet: function (){
+    console.log("Testing", this.name)
+}
+}
+
+let test = user
+test.greet()
