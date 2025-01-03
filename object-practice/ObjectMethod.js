@@ -9,18 +9,3 @@ let person = {
 
 person.greet()
 console.log(person['my name'])
-
-person.hobby = 'Programming'
-console.log(person)
-
-
-
-
-
-
-
-
-
-
-
-
