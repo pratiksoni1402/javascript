@@ -149,3 +149,4 @@ let cmp2 = ['a', 'b', 'c']
 console.log("is Equal", cmp1 === cmp2)
 
 //! Two arrays can't be equal unless there address is same
+
