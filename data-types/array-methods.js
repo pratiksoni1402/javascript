@@ -71,3 +71,86 @@ console.log(arr6.indexOf(null)) //-1
 console.log(arr6.includes(1)) //true
 
 //! Please note that indexOf uses the strict equality === for comparison. So, if we look for false, it finds exactly false and not the zero.
+
+//()find and findIndex/findLastIndex
+
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"},
+  {id: 4, name: "John"},
+];
+
+let user = users.find((value) => value.id == 1)
+console.log("This is the value" ,user.name)
+
+//* In real life, arrays of objects are a common thing, so the find method is very useful.
+
+//* Note that in the example we provide to find the function item => item.id == 1 with one argument. That’s typical, other arguments of this function are rarely used.
+
+//* The arr.findIndex method has the same syntax but returns the index where the element was found instead of the element itself. The value of -1 is returned if nothing is found.
+
+
+//* The arr.findLastIndex method is like findIndex, but searches from right to left, similar to lastIndexOf.
+
+let indexValue = users.findIndex((value)=> value.name == 'John')
+console.log("Index Value", indexValue)
+
+//() Filter
+let someUser = users.filter((user)=> user.id <= 4)
+console.log("Some users", someUser.length)
+//* The find method looks for a single (first) element that makes the function return true.
+
+//* If there may be many, we can use arr.filter(fn).
+
+//* The syntax is similar to find, but filter returns an array of all matching elements:
+
+//! Transform an array
+//() Map
+
+let mapping = users.map(mapped=> mapped);
+console.log("Length of each element", mapping.length)
+
+//() Reverse
+
+let arr7 = ['1', '2', '3', '4', '5']
+console.log(arr7.reverse())
+
+//() Split and Join
+let names = 'Bilbo, Gandalf, Nazgul';
+console.log("A Message to ",names)
+let splitting = names.split(', ', 2)
+
+for (let name of splitting){
+  console.log("A Message to", name)
+}
+
+//? The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though:
+
+//() reduce/reduceRight
+
+//* When we need to iterate over an array – we can use forEach, for or for..of.
+
+//* When we need to iterate and return the data for each element – we can use map.
+
+//* The methods arr.reduce and arr.reduceRight also belong to that breed, but are a little bit more intricate. They are used to calculate a single value based on the array.
+
+//? let value = arr.reduce(function(accumulator, item, index, array) {
+// ?  // ...
+//? }, [initial]);
+
+let arr8 = [1, 2, 3, 4, 5];
+let sum = arr8.reduce((sum, current)=> sum + current, 0)
+console.log(sum)
+//! The method arr.reduceRight does the same but goes from right to left.
+
+//() Array.isArray
+//* Arrays do not form a separate language type. They are based on objects. So typeof does not help to distinguish a plain object from an array:
+
+console.log(typeof {}); // object
+console.log(typeof []); // object (same)
+
+//* …But arrays are used so often that there’s a special method for that: Array.isArray(value). It returns true if the value is an array, and false otherwise.
+
+console.log(Array.isArray({})); //false
+console.log(Array.isArray([])); //true
