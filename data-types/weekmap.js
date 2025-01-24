@@ -21,4 +21,5 @@ john = null; //^ overwrite the reference
 
 //! WeakMap does not support iteration and methods keys(), values(), entries(), so there’s no way to get all keys or values from it.
 
+
 //()WeakSet
