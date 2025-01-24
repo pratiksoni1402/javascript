@@ -1,5 +1,8 @@
-for (let i = 1; i<=5; i++){
-  for (let j = 0; j<i; j++){
-    console.log("*")
-  }
+let n= 5
+for (let j = 1; j<=n; j++){
+      let row = ''
+    for (let i = 1; i <=j; i++){
+      row += ' * '
+    }
+    console.log(row)
 }
