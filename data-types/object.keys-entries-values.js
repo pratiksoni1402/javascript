@@ -57,4 +57,5 @@ let price = {
 let doublePrice = Object.fromEntries(
   Object.entries(price).map(entries =>[ entries[0], entries[1] * 2])
 )
+
 console.log("Double price", doublePrice)
