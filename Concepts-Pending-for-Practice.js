@@ -27,3 +27,5 @@
 //() Destructuring assignment
 //() Date and time
 //() JSON methods, toJSON
+//() Destructuring Assignment
+//() Date and Time
