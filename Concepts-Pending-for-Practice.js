@@ -30,3 +30,4 @@
 //() Destructuring Assignment
 //() Date and Time
 //() JSON methods, toJSON
+//() Rest Parameter Spread Operator
