@@ -31,3 +31,4 @@
 //() Date and Time
 //() JSON methods, toJSON
 //() Rest Parameter Spread Operator
+//() IIFE (Immediatetly invoked function expression)
