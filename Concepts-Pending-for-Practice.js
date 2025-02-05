@@ -30,5 +30,7 @@
 //() Destructuring Assignment
 //() Date and Time
 //() JSON methods, toJSON
+
+//! Advanced working with functions
 //() Rest Parameter Spread Operator
 //() IIFE (Immediatetly invoked function expression)
