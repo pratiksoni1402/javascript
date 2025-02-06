@@ -34,3 +34,4 @@
 //! Advanced working with functions
 //() Rest Parameter Spread Operator
 //() IIFE (Immediatetly invoked function expression)
+//() Function object, NFE

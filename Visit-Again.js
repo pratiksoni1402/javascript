@@ -3,3 +3,4 @@
 //() JSON methods, toJSON
 //() Recursion and Stack
 //() Variable scope, closure
+//() Function object, NFE
