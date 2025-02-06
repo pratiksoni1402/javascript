@@ -35,3 +35,5 @@
 //() Rest Parameter Spread Operator
 //() IIFE (Immediatetly invoked function expression)
 //() Function object, NFE
+//() The "new Function" syntax
+//() Scheduling: setTimeout and setInterval
