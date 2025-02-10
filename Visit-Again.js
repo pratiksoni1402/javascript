@@ -5,3 +5,5 @@
 //() Variable scope, closure
 //() Function object, NFE
 //() Scheduling: setTimeout and setInterval
+//! Decorators and forwarding, call/apply (important)
+//! Function binding (important)

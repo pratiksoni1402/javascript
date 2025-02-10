@@ -37,3 +37,6 @@
 //() Function object, NFE
 //() The "new Function" syntax
 //() Scheduling: setTimeout and setInterval
+//! Decorators and forwarding, call/apply (important)
+//! Function binding (important)
+//() Arrow functions revisited
