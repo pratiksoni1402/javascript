@@ -62,3 +62,12 @@ console.log(timerId)
 let newInterval = setInterval(()=> console.log('Hello Interval'), 2000)
 
 setTimeout(()=>{clearInterval(newInterval); console.log('stop');},5000)
+
+//() Nested setTimeout
+
+let timeId = setTimeout(function tick(){
+  console.log("Tick Tock");
+  timeId = setTimeout(tick, 3000)
+},1000);
+
+//() Nested setTimeout allows to set the delay between the executions more precisely than setInterval.
