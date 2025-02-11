@@ -1,0 +1,9 @@
+Difference Between parseInt() and Number()
+Feature	parseInt()	Number()
+Purpose	Parses a string and extracts an integer (stops at non-numeric characters).	Converts the entire string to a number (returns NaN if invalid).
+Returns	Only an integer (ignores decimals).	Integer or floating-point number.
+Handles Non-Numeric Characters	Stops at the first non-numeric character and parses the valid part.	If any non-numeric character is present, it returns NaN.
+Example (Valid Input)	parseInt("123.45") → 123	Number("123.45") → 123.45
+Example (With Non-Numeric Characters)	parseInt("123abc") → 123	Number("123abc") → NaN
+Example (Completely Invalid)	parseInt("abc123") → NaN	Number("abc123") → NaN
+Base/Radix Support	Supports specifying a base (e.g., parseInt("101", 2) → 5 for binary).	Does not support base conversion.

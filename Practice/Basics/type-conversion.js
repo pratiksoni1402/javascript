@@ -56,3 +56,36 @@ let j = 10
 console.log(typeof `${j}`)
 
 //() What is the difference between parseInt() and Number() for type conversion?
+
+console.log(parseInt("123.45"));  // 123  (Extracts only integer part)
+console.log(Number("123.45"));    // 123.45  (Converts fully)
+
+console.log(parseInt("123abc"));  // 123  (Ignores 'abc')
+console.log(Number("123abc"));    // NaN  (Invalid number)
+
+console.log(parseInt("abc123"));  // NaN  (No valid number at start)
+console.log(Number("abc123"));    // NaN  (Completely invalid)
+console.log(Number("23a4bc123"));    // NaN  (Completely invalid)
+
+//() Unexpected Type Coercion
+console.log('--1--',[] + []); // blank An empty array ([]) converts to an empty string ("").
+console.log('--2--',[] + {}); // [object object]
+console.log('--3--',{} + {}); // [object object] [object object]
+console.log([1,2,3] + [4,5,6]);  // 1, 2, 34, 5, 6
+
+//() Type Conversion in Comparisons
+console.log('--TCC1--',null == undefined); // true null is only equal to undefined and nothing else.
+
+console.log('--TCC2--',null === undefined); // false It checks both the value and the type.
+console.log('--TCC3--',0 == false); // true
+console.log('--TCC4--',0 === false); // false
+console.log('--TCC5--'," \t\n" == 0); // true a string containing only whitespace converts to 0 when used in a numeric context:
+
+//()  Implicit vs Explicit Conversion
+//? Which values will evaluate to true and which to false when converted to a boolean?
+console.log(Boolean([]));
+console.log(Boolean({}));
+console.log(Boolean(' '));
+console.log(Boolean(null));
+console.log(Boolean(undefined)); //false
+console.log(Boolean("false"));   //false
