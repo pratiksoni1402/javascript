@@ -89,3 +89,34 @@ console.log(Boolean(' '));
 console.log(Boolean(null));
 console.log(Boolean(undefined)); //false
 console.log(Boolean("false"));   //false
+
+//()  Unary + Operator and Type Conversion
+console.log("--------------");
+console.log(+"123"); // Number 123
+console.log(+""); // 0 The empty string ("") is falsy in JavaScript.
+console.log(+true); //1 JavaScript converts null to a number using Number(null).
+//The result is always 0.
+console.log(+false); //0
+console.log(+null); // 0
+console.log(+undefined); // NaN
+console.log(+[]); // 0
+console.log(+{});  // Nan
+
+//() Implicit Type Coercion in Arithmetic Operations
+//? What will be the result of the following?
+console.log("-------------xxxxxxxxx---------"); // 2
+console.log(4 - "2"); // 2
+console.log("4" * "2"); // 8
+console.log("4" / 2); // 2
+console.log("4px" - 2); // Nan
+console.log("4px" + 2); //4px2
+console.log("5" - true); // 4
+console.log("5" + true);  // 5 true
+
+//() Edge Cases in Type Conversion
+//? Explain the output of:
+console.log('------------'); //
+console.log([] == 0); // true
+console.log(![] == false); //true
+console.log({} == "[object Object]"); //true
+console.log([] == ![]); // true
