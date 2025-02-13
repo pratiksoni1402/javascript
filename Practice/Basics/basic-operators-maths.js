@@ -113,3 +113,39 @@
 
  console.log(+"Hello");
  console.log(+"100");
+
+ function randomInteger(a, b){
+   let minCeil = Math.ceil(a)
+  let maxFloor = Math.floor(b)
+  console.log(Math.floor(Math.random() * (maxFloor - minCeil + 1) + minCeil))
+ }
+
+ randomInteger(50, 100)
+
+ function withoutAbsolute(num) {
+  console.log(num < 0 ? -num : num)
+ }
+
+ withoutAbsolute(-15)
+
+ console.log(+30 -15)
+
+ function floatingPoint(){
+  console.log(Math.random().toFixed(4))
+ }
+
+ floatingPoint()
+
+ //() Operator Precedence & Associativity
+ let result = 10 + 5 * 2 - 3 / 3;
+ console.log(result);
+
+ console.log(10 + "5" - 2);
+
+ let xay = 10;
+ xay += (5, 3, 2);
+ console.log(xay);
+ //* The comma operator is used to evaluate multiple expressions, but only the last expression is returned. It does not store the intermediate values; instead, it just executes them and moves forward.
+
+ //! JavaScript does not store intermediate results from the comma operator.
+ (10, console.log("Hello"), console.log("World"));
