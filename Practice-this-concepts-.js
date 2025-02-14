@@ -40,3 +40,7 @@
 //! Decorators and forwarding, call/apply (important)
 //! Function binding (important)
 //() Arrow functions revisited
+
+//! Object properties configuration
+//() Property flags and descriptors
+//() Property getters and setters
