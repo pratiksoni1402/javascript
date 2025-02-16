@@ -8,7 +8,6 @@ if(browsers == 'Edge'){
 }
 
 //Rewrite "if" into "switch"
-
 let a = 2
 switch (a){
   case 0:
