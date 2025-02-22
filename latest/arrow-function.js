@@ -17,7 +17,6 @@ let ask =(question, yes, no) => {
   else no()
 }
 
-
 ask(
   "Bhai tu thik hai",
   () => console.log("Ha Bhai"),
