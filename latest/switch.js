@@ -7,8 +7,8 @@ if(browsers == 'Edge'){
   console.log("We hope that this page looks ok!")
 }
 
-//Rewrite "if" into "switch"
 
+//Rewrite "if" into "switch"
 let a = 2
 switch (a){
   case 0:
