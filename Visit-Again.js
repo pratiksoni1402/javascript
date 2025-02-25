@@ -8,3 +8,8 @@
 //! Decorators and forwarding, call/apply (important)
 //! Function binding (important)
 //() Property flags and descriptors
+
+
+//! Prototype Inheritance Section Skipped
+//! Classes Section Skipped
+
