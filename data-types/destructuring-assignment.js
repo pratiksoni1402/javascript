@@ -89,7 +89,7 @@ console.log(rest2.width);   // 100
 //() Nested destructuring
 //* If an object or an array contains other nested objects and arrays, we can use more complex left-side patterns to extract deeper portions.
 
-//* In the code below options has another object in the property size and an array in the property items. The pattern on the left side of the assignment has the same structure to extract values from them:
+//* In the code below options has another object in the property size and an array in the property items. The Pattern on the left side of the assignment has the same structure to extract values from them:
 
 let options2 = {
   size:{
