@@ -1,4 +1,4 @@
-// Types of Promise
+// Types of Promises
 // Promise.all
 // Promise.allSettled
 Promise.all([
