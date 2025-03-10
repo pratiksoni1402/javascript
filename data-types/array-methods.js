@@ -118,11 +118,11 @@ console.log(arr7.reverse())
 
 //() Split and Join
 let names = 'Bilbo, Gandalf, Nazgul';
-console.log("A Message to ",names)
+console.log("Unsplitted Array ",names)
 let splitting = names.split(', ', 2)
 
 for (let name of splitting){
-  console.log("A Message to", name)
+  console.log("Splitted Array", name)
 }
 
 //? The split method has an optional second numeric argument – a limit on the array length. If it is provided, then the extra elements are ignored. In practice it is rarely used though:
