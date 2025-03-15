@@ -6,6 +6,9 @@ const person = {
     return `Hello my name is ${person.name} !`
   }
 }
-for (let props in person){
-  console.log(props, person[props])
+
+if(person.hasOwnProperty('country')){
+  console.log(true)
+}else{
+  console.log(false)
 }
