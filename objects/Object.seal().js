@@ -8,7 +8,7 @@ const car = {
   year: 2025,
   model: 'M8 GT',
   interiors:{
-    seats: 'Leather Upholestry',
+    seats: 'Leather Upholstery',
     cruiseControl: 'Enabled',
   },
 }
