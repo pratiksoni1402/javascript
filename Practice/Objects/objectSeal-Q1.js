@@ -13,3 +13,5 @@ person.city = 'Jodhpur'
 person.phoneNumber = 9125482
 delete person.city
 console.log("Sealed", person)
+
+//* In object.seal you can modify existing property but cannot delete or add property
