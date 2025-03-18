@@ -7,11 +7,12 @@ const person = {
   }
 }
 person.age = 23
-const propDisc = Object.defineProperty(person, 'age',{
-  writable: false
+const propDisc = Object.defineProperty(person, 'city',{
+  enumerable:false,
 })
 person.age = 230
 
+console.log("Person", Object.keys(propDisc))
 console.log("Non Writable",propDisc)
 //* In object.freeze() property can neither be deleted nor be added or modified
 
