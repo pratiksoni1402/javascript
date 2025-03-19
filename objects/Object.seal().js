@@ -34,5 +34,5 @@ function SealingObject(obj){
 }
 
 SealingObject(car)
- car.interiors.add = "Adding" // Will not work
+car.interiors.add = "Adding" // Will not work
 console.log("After Sealing", car)

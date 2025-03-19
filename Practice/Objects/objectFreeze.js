@@ -6,14 +6,15 @@ const person = {
     return `Hello my name is ${person.name} !`
   }
 }
-person.age = 23
-const propDisc = Object.defineProperty(person, 'city',{
-  enumerable:false,
+person.name = 'lorem'
+const propDisc = Object.defineProperty(person, 'name',{
+  configurable:false,
+  value:'Hello',
 })
-person.age = 230
+delete person.name
 
-console.log("Person", Object.keys(propDisc))
 console.log("Non Writable",propDisc)
+// console.log("Trying to delete", Object.keys(propDisc))
 //* In object.freeze() property can neither be deleted nor be added or modified
 
 
