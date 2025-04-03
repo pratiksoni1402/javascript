@@ -5,8 +5,9 @@ async function f1(){
 
 async function test(){
   let promise = new Promise((resolve, reject)=>{
-    setTimeout(resolve=> console.log("Resolve", resolve),2000)
+    setTimeout(resolve=> console.log("Resolve", resolve),)
   })
+  // let promiseTwo = new Promise()
   let result = await promise
   console.log("This is result", result)
 }
