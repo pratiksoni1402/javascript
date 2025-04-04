@@ -1,6 +1,7 @@
 async function f1(){
   return 1
 }
+
 //The word “async” before a function means one simple thing: a function always returns a promise.
 
 async function test(){
