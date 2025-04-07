@@ -10,10 +10,10 @@ document.body.children[0].innerHTML
 //!textContent: Includes all text, regardless of whether it is visible or not.
 //!innerText: Only includes text that is visible (considering CSS display styles).
 
-//!textContent: Returns text exactly as it appears in the Document Object Model, ignoring CSS styles.
+//!textContent: Returns text exactly as it appears in the DocumentObjectModel, ignoring CSS styles.
 //!innerText: Reflects the rendered text, considering CSS styles, and normalizes whitespace.
 
-//!textContent can be faster in performance as it directly interacts with the Document Object Model without considering CSS styles.
+//!textContent can be faster in performance as it directly interacts with the DocumentObjectModel without considering CSS styles.
 //!innerText may be slower due to its need to consider CSS and layout.
 
 //*Use Cases
