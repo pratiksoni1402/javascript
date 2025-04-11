@@ -1,5 +1,56 @@
-body{
-  background-color: wheat;
-  color: black;
+.preview-header {
+  background-color: #00c6b4;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 650px;
+  font-family: sans-serif;
+  overflow: hidden;
 
+  .package-price {
+    background-color: #ff69b4;
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .detail {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffeaa7;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0.3rem 0 1rem;
+  }
+
+  img {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 140px;
+    height: auto;
+    border-radius: 0.5rem;
+
+    // 👇 Clear float on small screens
+    @media (max-width: 600px) {
+      float: none;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+  }
+
+  .tagline {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
 }
