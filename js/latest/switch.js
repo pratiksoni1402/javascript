@@ -1,12 +1,11 @@
 let browsers = 'Edge'
-if(browsers == 'Edge'){
+if(browsers === 'Edge'){
   console.log("You've got the Edge!")
-}else if(browsers == 'Chrome' || browsers == 'Firefox' || browsers == 'Safari' || browsers == 'Opera'){
+}else if(browsers === 'Chrome' || browsers === 'Firefox' || browsers === 'Safari' || browsers === 'Opera'){
   console.log("Okay we support these browsers too")
 }else{
   console.log("We hope that this page looks ok!")
 }
-
 
 //Rewrite "if" into "switch"
 let a = 2
