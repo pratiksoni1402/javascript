@@ -6,11 +6,13 @@
   <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-<input type="button" id="elem" value="Click me">
-<!--<input id="element" type="button" value="Handlers"/>-->
-<!--<button onclick=console.log(this.innerHTML)>Click me i am Here</button>-->
-<input type="button" onclick="console.log(event.clientX)" value="Event Type">
-<button id="objHandler">hey wanna click me </button>
-<script src="js/DocumentObjectModel/introductionToEvents/browserEvents.js"></script>
+  <button data-toggle-id="subscribe">
+    Subscribe
+  </button>
+
+  <form id="subscribe">
+    <input type="email" name="mail"/>
+  </form>
+<script src="js/DocumentObjectModel/introductionToEvents/eventDelegation.js"></script>
 </body>
 </html>

@@ -4,7 +4,9 @@
 14.7 WeakRef and FinalizationRegistry
 
 --> DOM Topics
-9.1 Element size and scrolling
-9.10 Window sizes and scrolling
-9.11 Coordinates
+1.9 Element size and scrolling
+1.10 Window sizes and scrolling
+1.11 Coordinates
+2.4 Browser default actions (learn while practicing)
+2.5 Dispatching custom events (learn while practicing)
 
