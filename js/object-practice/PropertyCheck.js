@@ -9,7 +9,7 @@ function PropertyCheck(obj, property, defaultValue = 'USA'){
 
 PropertyCheck(student2, "country","India")
 
-// you can make the function a little cleaner with a shorthand for the default parameter:
+// you can make the function a little cleaner with shorthand for the default parameter:
 
 function PropertyCheckMethod2(obj, property, defaultValue = 'USA') {
   if (!(property in obj)) {

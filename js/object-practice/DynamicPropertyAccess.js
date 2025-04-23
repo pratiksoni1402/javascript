@@ -1,4 +1,5 @@
 // --------------------Dynamic Property Access---------------
+
 let student2 = {
   name: 'pratik',
   age: 26,

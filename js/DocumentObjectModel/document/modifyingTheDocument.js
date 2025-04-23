@@ -3,17 +3,17 @@ let div = document.createElement('div')
 div.className = 'alert'
 div.innerHTML = '<strong>Inserted in DOM</strong> using JavaScript.'
 document.body.append(div)
-setTimeout(()=> div.remove(), 2000);
+setTimeout(() => div.remove(), 2000);
 
 //() insertion in DOM
 let textNode = document.createTextNode('This is text node.')
-
 ol.before('before')
 ol.after('after')
 
 let liFirst = document.createElement('li')
 liFirst.innerHTML = 'prepend'
 let appndChild = liFirst.innerHTML = 'Append Child'
+
 ol.appendChild(appndChild)
 ol.prepend(liFirst)
 
