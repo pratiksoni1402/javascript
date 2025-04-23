@@ -46,7 +46,7 @@ console.log(link)
 let gta = link.getAttribute('href')
 console.log(gta)
 console.log(a.href)
-
+console.log()
 let user = {
   name:"Pratik",
   age:25,
@@ -63,3 +63,4 @@ let z = document.getElementById('test')
 console.log(z.dataset.about)
 
 //* Multiword attributes like data-order-state become camel-cased: dataset.orderState.
+
