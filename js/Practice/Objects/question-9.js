@@ -1,3 +1,4 @@
+// Method 1
 function removeDuplicatesMethodOne(array) {
   let set = new Set();
   for (let i = 0; i < array.length; i++) {
