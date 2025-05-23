@@ -4,10 +4,12 @@ const orders = [
   { id: 103, amount: 4000, customer: "Rakesh" }
 ];
 
-console.log(orders.map(calcGst => {
+const result = orders.map(calcGst => {
   const orderRecords = {}
   orderRecords.customer = calcGst.customer,
-  orderRecords.amount = calcGst.amount,
-  orderRecords.amountWithGST = ((calcGst.amount) + (calcGst.amount * 0.18))
+    orderRecords.amount = calcGst.amount,
+    orderRecords.amountWithGST = ((calcGst.amount) + (calcGst.amount * 0.18))
   return orderRecords
-}))
+})
+
+console.log(result)
