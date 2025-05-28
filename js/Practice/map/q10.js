@@ -10,3 +10,4 @@ function labelAgeGroup(person) {
 
 const ageGroup = people.map(labelAgeGroup)
 console.log(ageGroup)
+
