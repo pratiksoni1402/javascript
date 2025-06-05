@@ -8,5 +8,4 @@ eval("x=13")
 console.log(x)
 
 eval("let y = 23; function f() {}");
-
 console.log(typeof y);
