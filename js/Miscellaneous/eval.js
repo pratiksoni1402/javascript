@@ -1,5 +1,4 @@
 // () In strict mode, eval has its own lexical environment. So functions and variables, declared inside eval, are not visible outside:
-
 let code = 'console.log("Hello")';
 eval(code)
 
