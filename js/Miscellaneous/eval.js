@@ -8,3 +8,4 @@ console.log(x)
 
 eval("let y = 23; function f() {}");
 console.log(typeof y);
+const c = 12
