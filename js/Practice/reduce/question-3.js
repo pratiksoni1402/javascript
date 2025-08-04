@@ -6,3 +6,7 @@ const flattenArray = nested.reduce((acc, currentValue)=>{
 
 },[])
 console.log(flattenArray);
+
+// Using Spread Method
+const flattenBySpread = nested.reduce((acc, currentValue)=> [...acc, ...currentValue], [])
+console.log(flattenBySpread)
