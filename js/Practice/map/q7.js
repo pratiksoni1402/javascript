@@ -3,7 +3,6 @@ const students = [
   { name: "Rahul", score: 85 },
   { name: "Sneha", score: 92 }
 ];
-
 const results = students.map(student => {
   const grade = (student.score > 80) ? "A" : "B";
   const studentGrades = { ...student, grade };
