@@ -44,7 +44,6 @@ decreaseCount.addEventListener('click', () => {
     updateUi();
   }else{
     console.log('Cannot perform decrement beyond minimum value')
-
   }
 });
 
