@@ -38,6 +38,7 @@ increaseCount.addEventListener('click', () => {
   }
 });
 
+
 decreaseCount.addEventListener('click', () => {
   if (displayCount.textContent > +minValue) {
     count--;
