@@ -10,11 +10,11 @@ const getMinValue = document.getElementById('min-value');
 const getMaxValue = document.getElementById('max-value');
 
 
-let maxValue;
-let minValue;
+let maxValue ;
+let minValue = 0;
 
-console.log(maxValue)
-console.log(minValue)
+console.log("This is minimum value",maxValue)
+console.log("This is maximum value",minValue)
 
 function updateUi() {
   displayCount.textContent = count;
@@ -22,10 +22,12 @@ function updateUi() {
   resetCount.disabled = count ===0
 }
 
+// Adding input value to variable (min value)
 getMinValue.addEventListener('change', (e)=>{
-  displayCount.textContent = e.target.value
+  minValue = e.target.value
 })
 
+// Adding input value to variable (max value)
 getMaxValue.addEventListener('change', (e)=>{
   maxValue = e.target.value
 
@@ -36,8 +38,9 @@ updateUi();
 
 increaseCount.addEventListener('click', () => {
   console.log("Max value", maxValue)
+  console.log("Min value", minValue)
     if(count < maxValue){
-      count++
+      count = minValue + 1
       updateUi();
     }else{
       alert('Cannot increase count above maximum value')
