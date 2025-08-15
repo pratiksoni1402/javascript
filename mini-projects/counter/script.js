@@ -13,6 +13,7 @@ const getMaxValue = document.getElementById('max-value');
 let maxValue ;
 let minValue = 0;
 
+
 console.log("This is minimum value",maxValue)
 console.log("This is maximum value",minValue)
 
