@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <title>Counter</title>
 
+
+  <script src="https://jsuites.net/v4/jsuites.js"></script>
+
+  <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="CSS/style.css">
+
 </head>
 <body>
 
@@ -27,12 +33,14 @@
       <label for="step-slider"></label><input type="range" id="step-slider" min="1" max="10" value="1" />
       <div id="step-label">Step: 1</div>
     </div>
-    <div class="form-check d-flex justify-content-center mt-2">
-      <input class="form-check-input" type="checkbox" name="save-values" id="save-settings" />
-      <label class="form-check-label ms-2" for="save-settings">
-        Save values in Local Storage
+
+    <div class="form-check d-flex align-items-center justify-content-between mt-2 mb-3 p-0">
+      <label for="save-settings" class="switch-label text-start">
+        Save values in Local Storage ?
       </label>
+      <input type="checkbox" id="save-settings" class="toggle-switch" />
     </div>
+
   </div>
   <div class="action-buttons">
     <div class="d-flex gap-2 justify-content-center align-items-center">
@@ -45,7 +53,9 @@
 
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
 <!-- Custom JS -->
 <script src="./mini-projects/counter/script.js"></script>
+
 </body>
 </html>

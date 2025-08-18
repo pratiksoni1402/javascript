@@ -35,11 +35,20 @@ function saveToLocalStorage(){
 }
 saveSettings.addEventListener('change', function() {
   if(this.checked) {
+    jSuites.notification({
+      message: 'Local Storage Enabled',
+      class: 'toast-success',
+    });
       saveToLocalStorage()
   }else{
     localStorage.removeItem('savedValues')
+    jSuites.notification({
+      message: 'Local Storage Disabled',
+      class: 'toast-error',
+    });
   }
 })
+
 
 // Whenever values change, call saveToLocalStorage()
 getMinValue.addEventListener("input", () => {
@@ -130,6 +139,7 @@ increaseCount.addEventListener('click', () => {
   if (count + stepValue <= maxValue) {
     count += stepValue;
     updateUi();
+    saveToLocalStorage();
   } else {
     alert('Cannot increase count beyond maximum value');
   }
@@ -140,6 +150,7 @@ decreaseCount.addEventListener('click', () => {
   if (count - stepValue >= minValue) {
     count -= stepValue;
     updateUi();
+    saveToLocalStorage();
   } else {
     alert('Cannot decrease count below minimum value');
   }
@@ -149,6 +160,7 @@ decreaseCount.addEventListener('click', () => {
 resetCount.addEventListener('click', () => {
   count = minValue;
   updateUi();
+  saveToLocalStorage();
 });
 
 // Initialize
