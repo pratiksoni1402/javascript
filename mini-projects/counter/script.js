@@ -51,10 +51,10 @@ getMaxValue.addEventListener('change', (e) => {
 function setupSlider() {
   if (minValue >= 0 && maxValue > minValue && maxValue !== Infinity) {
     stepSlider.min = 1;
-    stepSlider.max = maxValue;   // ✅ now matches entered max value
-    if (stepValue > maxValue) stepValue = maxValue; // keep in range
+    stepSlider.max = maxValue;
+    if (stepValue > maxValue) stepValue = maxValue;
     stepSlider.value = stepValue;
-    stepLabel.textContent = `Step: ${stepValue}`;
+    stepLabel.textContent = `Stepup by: ${stepValue}`;
   }
 }
 

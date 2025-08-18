@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Counter</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
 <div class="content-wrapper text-center mt-4">
   <div id="count" class="count-value fs-1 mb-3">0</div>
 
-  <div class="values">
+  <div class="input-fields">
     <div class="d-flex gap-2 justify-content-center align-items-center mb-3">
       <label>
         <input type="number" id="min-value" placeholder="Enter Minimum Value" min="0" />
@@ -20,15 +23,18 @@
       </label>
     </div>
 
-    <div class="mb-3">
-      <input type="range" id="step-slider" min="1" max="10" value="1" />
-      <div id="step-label">Step: 1</div>
+    <div class="mb-5">
+      <label for="step-slider"></label><input type="range" id="step-slider" min="1" max="10" value="1" />
+      <div id="step-label">Stepup by: 1</div>
     </div>
   </div>
-
-  <button id="increment" class="btn btn-success me-2">+</button>
-  <button id="decrement" class="btn btn-danger me-2">-</button>
-  <button id="reset" class="btn btn-secondary">Reset</button>
+  <div class="action-buttons">
+    <div class="d-flex gap-2 justify-content-center align-items-center">
+      <button id="increment" class="btn btn-success">+</button>
+      <button id="decrement" class="btn btn-danger">-</button>
+    </div>
+    <button id="reset" class="btn btn-secondary">Reset</button>
+  </div>
 </div>
 
 <!-- Bootstrap -->
