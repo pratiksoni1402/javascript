@@ -10,158 +10,150 @@ const getMaxValue = document.getElementById('max-value');
 const stepSlider = document.getElementById('step-slider');
 const stepLabel = document.getElementById('step-label');
 
-const saveSettings = document.getElementById('save-settings');
+const saveSettings = document.getElementById('save-settings'); // local
+const saveSession = document.getElementById('save-session');   // session
 
 let minValue = 0;
 let maxValue = Infinity;
 let stepValue = 1;
+let previousCount = count;
 
+// ---------- Utilities ----------
 function updateUi() {
   displayCount.textContent = count;
+
+  displayCount.classList.toggle("count-up", count > previousCount);
+  displayCount.classList.toggle("count-down", count < previousCount);
+
   decreaseCount.disabled = count <= minValue;
   resetCount.disabled = count === 0;
+
+  previousCount = count;
 }
 
-function saveToLocalStorage(){
-  if(saveSettings.checked){
-    localStorage.setItem('savedValues', JSON.stringify({
-      count,
-      minValue,
-      maxValue,
-      stepValue,
-      checkStatus : true
-    }))
+function getDataObj() {
+  return { count, minValue, maxValue, stepValue, checkStatus: true };
+}
+
+function saveData() {
+  if (saveSettings.checked) {
+    localStorage.setItem("savedValues", JSON.stringify(getDataObj()));
+  } else {
+    localStorage.removeItem("savedValues");
+  }
+
+  if (saveSession.checked) {
+    sessionStorage.setItem("savedValues", JSON.stringify(getDataObj()));
+  } else {
+    sessionStorage.removeItem("savedValues");
   }
 }
-saveSettings.addEventListener('change', function() {
-  if(this.checked) {
-    jSuites.notification({
-      message: 'Local Storage Enabled',
-      class: 'toast-success',
-    });
-      saveToLocalStorage()
-  }else{
-    localStorage.removeItem('savedValues')
-    jSuites.notification({
-      message: 'Local Storage Disabled',
-      class: 'toast-error',
-    });
-  }
-})
 
-
-// Whenever values change, call saveToLocalStorage()
-getMinValue.addEventListener("input", () => {
-  minValue = +getMinValue.value || 0;
-  updateUi();
-  saveToLocalStorage();
-});
-
-getMaxValue.addEventListener("input", () => {
-  maxValue = +getMaxValue.value || Infinity;
-  updateUi();
-  saveToLocalStorage();
-});
-
-stepSlider.addEventListener("input", () => {
-  stepValue = +stepSlider.value;
-  stepLabel.textContent = `Step: ${stepValue}`;
-  updateUi();
-  saveToLocalStorage();
-});
-
-// Restore values if they exist
-window.addEventListener("DOMContentLoaded", () => {
-  const saved = JSON.parse(localStorage.getItem("savedValues"));
-  console.log('saved',saved)
+function loadData(storage) {
+  const saved = JSON.parse(storage.getItem("savedValues"));
   if (saved && saved.checkStatus) {
     count = saved.count ?? 0;
     minValue = saved.minValue ?? 0;
     maxValue = saved.maxValue ?? Infinity;
     stepValue = saved.stepValue ?? 1;
 
-    getMinValue.value = minValue !== 0 ? minValue : "";
+    getMinValue.value = minValue || "";
     getMaxValue.value = isFinite(maxValue) ? maxValue : "";
     stepSlider.value = stepValue;
     stepLabel.textContent = `Step: ${stepValue}`;
-    saveSettings.checked = true;
-
     updateUi();
+    return true;
+  }
+  return false;
+}
+
+// ---------- Event Listeners ----------
+saveSettings.addEventListener("change", function () {
+  if (this.checked) {
+    saveSession.checked = false; // only one active
+    jSuites.notification({ message: "Local Storage Enabled" });
+    saveData();
+  } else {
+    localStorage.removeItem("savedValues");
+    jSuites.notification({ message: "Local Storage Disabled" });
   }
 });
 
-// Handle min value
-getMinValue.addEventListener('change', (e) => {
-  let val = parseInt(e.target.value, 10);
-  if (isNaN(val) || val < 0) {
-    e.target.value = "";
-    alert("Minimum value cannot be negative");
-    return;
+saveSession.addEventListener("change", function () {
+  if (this.checked) {
+    saveSettings.checked = false; // only one active
+    jSuites.notification({ message: "Session Storage Enabled" });
+    saveData();
+  } else {
+    sessionStorage.removeItem("savedValues");
+    jSuites.notification({ message: "Session Storage Disabled" });
   }
-  minValue = val;
+});
+
+[getMinValue, getMaxValue].forEach((input, idx) => {
+  input.addEventListener("change", (e) => {
+    let val = parseInt(e.target.value, 10);
+    if (isNaN(val) || val < 0) {
+      e.target.value = "";
+      alert(`${idx ? "Maximum" : "Minimum"} value cannot be negative`);
+      return;
+    }
+    if (idx === 0) {
+      minValue = val;
+      count = Math.max(count, minValue);
+    } else {
+      maxValue = val;
+    }
+    setupSlider();
+    updateUi();
+    saveData();
+  });
+});
+
+stepSlider.addEventListener("input", (e) => {
+  stepValue = +e.target.value;
+  stepLabel.textContent = `Step: ${stepValue}`;
+  updateUi();
+  saveData();
+});
+
+increaseCount.addEventListener("click", () => {
+  if (count + stepValue <= maxValue) {
+    count += stepValue;
+    updateUi();
+    saveData();
+  } else alert("Cannot increase count beyond maximum value");
+});
+
+decreaseCount.addEventListener("click", () => {
+  if (count - stepValue >= minValue) {
+    count -= stepValue;
+    updateUi();
+    saveData();
+  } else alert("Cannot decrease count below minimum value");
+});
+
+resetCount.addEventListener("click", () => {
   count = minValue;
-  setupSlider();
   updateUi();
+  saveData();
 });
 
-// Handle max value
-getMaxValue.addEventListener('change', (e) => {
-  let val = parseInt(e.target.value, 10);
-  if (isNaN(val) || val < 0) {
-    e.target.value = "";
-    alert("Maximum value cannot be negative");
-    return;
-  }
-  maxValue = val;
-  setupSlider();
-  updateUi();
-});
-
-// Setup slider range when min or max changes
+// ---------- Setup Slider ----------
 function setupSlider() {
   if (minValue >= 0 && maxValue > minValue && maxValue !== Infinity) {
     stepSlider.min = 1;
     stepSlider.max = maxValue;
-    if (stepValue > maxValue) stepValue = maxValue;
-    stepSlider.value = stepValue;
+    stepSlider.value = Math.min(stepValue, maxValue);
     stepLabel.textContent = `Step: ${stepValue}`;
   }
 }
 
-// Step slider change
-stepSlider.addEventListener('input', (e) => {
-  stepValue = parseInt(e.target.value, 10);
-  stepLabel.textContent = `Step: ${stepValue}`;
-});
+// ---------- Init ----------
+window.addEventListener("DOMContentLoaded", () => {
+  // Try local first, then session
+  if (loadData(localStorage)) saveSettings.checked = true;
+  else if (loadData(sessionStorage)) saveSession.checked = true;
 
-// Increment
-increaseCount.addEventListener('click', () => {
-  if (count + stepValue <= maxValue) {
-    count += stepValue;
-    updateUi();
-    saveToLocalStorage();
-  } else {
-    alert('Cannot increase count beyond maximum value');
-  }
-});
-
-// Decrement
-decreaseCount.addEventListener('click', () => {
-  if (count - stepValue >= minValue) {
-    count -= stepValue;
-    updateUi();
-    saveToLocalStorage();
-  } else {
-    alert('Cannot decrease count below minimum value');
-  }
-});
-
-// Reset
-resetCount.addEventListener('click', () => {
-  count = minValue;
   updateUi();
-  saveToLocalStorage();
 });
-
-// Initialize
-updateUi();

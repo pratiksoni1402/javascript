@@ -2,158 +2,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
 
 //Global Variables
-:root{
+:root {
   --background: #feffea;
   --font-nata-sans: "Nata Sans", sans-serif;
 }
 
-body{
+body {
   background: var(--background);
 }
 
 
-.content-wrapper{
+.content-wrapper {
   width: 25%;
-  margin:0 auto ;
-    .input-fields{
-      label{
-        width: 100%;
-        input[type='number']{
-          padding: 0 8px;
-          font-size: 14px;
-          height: 2.5rem;
-          width: 100%;
-        }
-      }
-        input[type='range' i]{
-          width: 100% !important;
-        }
+  margin: 0 auto;
 
-      /* Base slider */
-      #step-slider {
-        -webkit-appearance: none; /* remove default Chrome/Safari style */
-        appearance: none;
-        width: 100%;
-        height: 6px;
-        background: #ddd;
-        border-radius: 5px;
-        outline: none;
-        cursor: pointer;
-      }
+  .input-fields {
+    label {
+      width: 100%;
 
-      /* Track (line behind the thumb) */
-      #step-slider::-webkit-slider-runnable-track {
-        height: 6px;
-        background: linear-gradient(90deg, #4caf50, #81c784);
-        border-radius: 5px;
-      }
-      #step-slider::-moz-range-track {
-        height: 6px;
-        background: linear-gradient(90deg, #4caf50, #81c784);
-        border-radius: 5px;
-      }
-
-      /* Thumb (the draggable circle) */
-      #step-slider::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: #4caf50;
-        border: 2px solid white;
-        margin-top: -6px; /* aligns thumb with track */
-        cursor: pointer;
-      }
-      #step-slider::-moz-range-thumb {
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: #4caf50;
-        border: 2px solid white;
-        cursor: pointer;
-      }
-
-      /* Optional: active hover/focus effects */
-      #step-slider:hover::-webkit-slider-thumb {
-        background: #388e3c;
-      }
-      #step-slider:active::-webkit-slider-thumb {
-        background: #2e7d32;
-      }
-
-      .toggle-switch {
-        appearance: none;
-        -webkit-appearance: none;
-        width: 50px;
-        height: 25px;
-        background: rgba(241, 35, 35, 0.9);
-        border-radius: 25px;
-        position: relative;
-        outline: none;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-
-      /* The slider circle */
-      .toggle-switch::before {
-        content: "";
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        width: 19px;
-        height: 19px;
-        background: white;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-      }
-
-      /* When checked */
-      .toggle-switch:checked {
-        background: #4caf50;
-      }
-
-      .toggle-switch:checked::before {
-        transform: translateX(18px);
-      }
-
-      /* Optional: Label styling */
-      .switch-label {
+      input[type='number'] {
+        padding: 0 8px;
         font-size: 14px;
-        cursor: pointer;
-        font-family: var(--font-nata-sans), serif;
+        height: 2.5rem;
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 7px;
       }
     }
-      .action-buttons{
-        button{
-          padding: 0;
-          width: 100%;
-          height: 40px;
-        }
 
-        .btn{
-          font-size: 24px;
-        }
+    input[type='range' i] {
+      width: 100% !important;
+    }
 
-        .btn-secondary{
-          margin-top: 20px;
-          font-size: 16px;
-        }
-      }
+    /* Base slider */
+    #step-slider {
+      -webkit-appearance: none;
+      /* remove default Chrome/Safari style */
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: #ddd;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Track (line behind the thumb) */
+    #step-slider::-webkit-slider-runnable-track {
+      height: 6px;
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      border-radius: 5px;
+    }
+
+    #step-slider::-moz-range-track {
+      height: 6px;
+      background: linear-gradient(90deg, #4caf50, #81c784);
+      border-radius: 5px;
+    }
+
+    /* Thumb (the draggable circle) */
+    #step-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4caf50;
+      border: 2px solid white;
+      margin-top: -6px;
+      /* aligns thumb with track */
+      cursor: pointer;
+    }
+
+    #step-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #4caf50;
+      border: 2px solid white;
+      cursor: pointer;
+    }
+
+    /* Optional: active hover/focus effects */
+    #step-slider:hover::-webkit-slider-thumb {
+      background: #388e3c;
+    }
+
+    #step-slider:active::-webkit-slider-thumb {
+      background: #2e7d32;
+    }
+
+    .toggle-switch {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 50px;
+      height: 25px;
+      background: rgba(241, 35, 35, 0.9);
+      border-radius: 25px;
+      position: relative;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    /* The slider circle */
+    .toggle-switch::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 19px;
+      height: 19px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    /* When checked */
+    .toggle-switch:checked {
+      background: #4caf50;
+    }
+
+    .toggle-switch:checked::before {
+      transform: translateX(18px);
+    }
+
+    /* Optional: Label styling */
+    .switch-label {
+      font-size: 14px;
+      cursor: pointer;
+      font-family: var(--font-nata-sans), serif;
+    }
   }
 
-.count-value{
+  .action-buttons {
+    button {
+      padding: 0;
+      width: 100%;
+      height: 40px;
+    }
+
+    .btn {
+      font-size: 24px;
+    }
+
+    .btn-secondary {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+.count-value {
   text-align: center;
   font-size: 96px;
   font-family: "Nata Sans", sans-serif;
 }
 
-.toast-success {
-  background: #4caf50 !important; /* Green */
-  color: #fff !important;
+.count-up {
+  color: #4caf50;
+  /* Green */
 }
 
-.toast-error {
-  background: #f44336 !important; /* Red */
-  color: #fff !important;
+.count-down {
+  color: #f44336;
+  /* Red */
 }
