@@ -65,7 +65,7 @@ function loadData(storage) {
     getMinValue.value = minValue || "";
     getMaxValue.value = isFinite(maxValue) ? maxValue : "";
     stepSlider.value = stepValue;
-    stepLabel.textContent = `Step: ${stepValue}`;
+    stepLabel.textContent = `Increase count by: ${stepValue}`;
     updateUi();
     return true;
   }
@@ -95,45 +95,51 @@ saveSession.addEventListener("change", function () {
   }
 });
 
-[getMinValue, getMaxValue].forEach((input, idx) => {
-  input.addEventListener("change", (e) => {
-    let val = e.target.value.trim();
+// Handle Min Value
+function parseValue(input, fieldName) {
+  let val = input.value.trim();
 
-    // If field is empty → reset defaults
-    if (val === "") {
-      if (idx === 0) {
-        minValue = 0;
-        count = Math.max(count, minValue);
-      } else {
-        maxValue = Infinity;
-      }
-    } else {
-      val = parseInt(val, 10);
+  if (val === "") return null;
 
-      if (isNaN(val) || val < 0) {
-        e.target.value = "";
-        alert(`${idx ? "Maximum" : "Minimum"} value cannot be negative`);
-        return;
-      }
+  val = parseInt(val, 10);
+  if (isNaN(val) || val < 0) {
+    input.value = "";
+    alert(`${fieldName} value cannot be negative`);
+    return null;
+  }
 
-      if (idx === 0) {
-        minValue = val;
-        count = Math.max(count, minValue);
-      } else {
-        maxValue = val;
-      }
-    }
+  return val;
+}
 
-    setupSlider();
-    updateUi();
-    saveData();
-  });
+getMinValue.addEventListener("change", (e) => {
+  const newMin = parseValue(e.target, "Minimum");
+
+  // if null → empty input, reset to default
+  minValue = newMin === null ? 0 : newMin;
+
+  // Adjust count if below min
+  if (count < minValue) count = minValue;
+
+  setupSlider();
+  updateUi();
+  saveData();
+});
+
+getMaxValue.addEventListener("change", (e) => {
+  const newMax = parseValue(e.target, "Maximum");
+
+  // if null → empty input, reset to Infinity
+  maxValue = newMax === null ? Infinity : newMax;
+
+  setupSlider();
+  updateUi();
+  saveData();
 });
 
 
 stepSlider.addEventListener("input", (e) => {
   stepValue = +e.target.value;
-  stepLabel.textContent = `Step: ${stepValue}`;
+  stepLabel.textContent = `Increase count by: ${stepValue}`;
   updateUi();
   saveData();
 });
@@ -159,6 +165,7 @@ resetCount.addEventListener("click", () => {
   updateUi();
   saveData();
 });
+
 
 // ---------- Setup Slider ----------
 function setupSlider() {
