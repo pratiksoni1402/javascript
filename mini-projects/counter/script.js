@@ -1,5 +1,10 @@
 let count = 0;
 
+const enableTimer = document.getElementById("enable-timer");
+const timerButtons = document.querySelector(".timer-buttons");
+const startTimer = document.getElementById("start-timer");
+const pauseTimer = document.getElementById("pause-timer");
+const stopTimer = document.getElementById("stop-timer");
 const displayCount = document.getElementById('count');
 const increaseCount = document.getElementById('increment');
 const decreaseCount = document.getElementById('decrement');
@@ -92,23 +97,39 @@ saveSession.addEventListener("change", function () {
 
 [getMinValue, getMaxValue].forEach((input, idx) => {
   input.addEventListener("change", (e) => {
-    let val = parseInt(e.target.value, 10);
-    if (isNaN(val) || val < 0) {
-      e.target.value = "";
-      alert(`${idx ? "Maximum" : "Minimum"} value cannot be negative`);
-      return;
-    }
-    if (idx === 0) {
-      minValue = val;
-      count = Math.max(count, minValue);
+    let val = e.target.value.trim();
+
+    // If field is empty → reset defaults
+    if (val === "") {
+      if (idx === 0) {
+        minValue = 0;
+        count = Math.max(count, minValue);
+      } else {
+        maxValue = Infinity;
+      }
     } else {
-      maxValue = val;
+      val = parseInt(val, 10);
+
+      if (isNaN(val) || val < 0) {
+        e.target.value = "";
+        alert(`${idx ? "Maximum" : "Minimum"} value cannot be negative`);
+        return;
+      }
+
+      if (idx === 0) {
+        minValue = val;
+        count = Math.max(count, minValue);
+      } else {
+        maxValue = val;
+      }
     }
+
     setupSlider();
     updateUi();
     saveData();
   });
 });
+
 
 stepSlider.addEventListener("input", (e) => {
   stepValue = +e.target.value;
@@ -157,3 +178,66 @@ window.addEventListener("DOMContentLoaded", () => {
 
   updateUi();
 });
+
+
+let timerInterval = null;
+
+// Handle toggle
+enableTimer.addEventListener("change", function () {
+  if (this.checked) {
+    // Hide + - buttons, show timer buttons
+    document.querySelector(".action-buttons").style.display = "none";
+    timerButtons.style.display = "block";
+
+    // Disable local/session storage
+    saveSettings.disabled = true;
+    saveSession.disabled = true;
+    saveSettings.checked = false;
+    saveSession.checked = false;
+    localStorage.removeItem("savedValues");
+    sessionStorage.removeItem("savedValues");
+
+    jSuites.notification({ message: "Timer Mode Enabled" });
+  } else {
+    // Show + - buttons, hide timer buttons
+    document.querySelector(".action-buttons").style.display = "block";
+    timerButtons.style.display = "none";
+
+    // Enable storage options back
+    saveSettings.disabled = false;
+    saveSession.disabled = false;
+
+    stopTimerFunc(); // reset timer
+    jSuites.notification({ message: "Timer Mode Disabled" });
+  }
+});
+
+// Timer functions
+function startTimerFunc() {
+  if (timerInterval) return; // already running
+  timerInterval = setInterval(() => {
+    if (count + stepValue <= maxValue) {
+      count += stepValue;
+      updateUi();
+    } else {
+      stopTimerFunc(); // stop when reaching max
+    }
+  }, 1000); // 1 sec interval
+}
+
+function pauseTimerFunc() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+}
+
+function stopTimerFunc() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+  count = minValue; // reset to min
+  updateUi();
+}
+
+// Button events
+startTimer.addEventListener("click", startTimerFunc);
+pauseTimer.addEventListener("click", pauseTimerFunc);
+stopTimer.addEventListener("click", stopTimerFunc);

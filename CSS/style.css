@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 :root {
   --background: #feffea;
-  --font-nata-sans: "Nata Sans", sans-serif;
+  --font-body: "Nata Sans", sans-serif;
+  --font-heading:"Playfair Display", serif;
 }
 
 body {
@@ -11,6 +13,7 @@ body {
 .content-wrapper {
   width: 25%;
   margin: 0 auto;
+  font-family: var(--font-body), serif;
 }
 .content-wrapper .input-fields {
   /* Base slider */
@@ -21,6 +24,11 @@ body {
   /* When checked */
   /* Optional: Label styling */
 }
+.content-wrapper .input-fields .seperator {
+  height: 2px;
+  width: 100%;
+  background: teal;
+}
 .content-wrapper .input-fields label {
   width: 100%;
 }
@@ -29,11 +37,18 @@ body {
   font-size: 14px;
   height: 2.5rem;
   width: 100%;
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 7px;
+}
+.content-wrapper .input-fields label input[type=number]:focus {
+  border: 2px solid teal;
+  outline: none;
 }
 .content-wrapper .input-fields input[type=range i] {
   width: 100% !important;
+}
+.content-wrapper .input-fields #step-label {
+  font-weight: 600;
 }
 .content-wrapper .input-fields #step-slider {
   -webkit-appearance: none;
@@ -48,12 +63,12 @@ body {
 }
 .content-wrapper .input-fields #step-slider::-webkit-slider-runnable-track {
   height: 6px;
-  background: linear-gradient(90deg, #4caf50, #81c784);
+  background: linear-gradient(90deg, teal, #11e0e0);
   border-radius: 5px;
 }
 .content-wrapper .input-fields #step-slider::-moz-range-track {
   height: 6px;
-  background: linear-gradient(90deg, #4caf50, #81c784);
+  background: linear-gradient(90deg, teal, #11e0e0);
   border-radius: 5px;
 }
 .content-wrapper .input-fields #step-slider::-webkit-slider-thumb {
@@ -62,7 +77,7 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #4caf50;
+  background: teal;
   border: 2px solid white;
   margin-top: -6px;
   /* aligns thumb with track */
@@ -72,15 +87,15 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #4caf50;
+  background: teal;
   border: 2px solid white;
   cursor: pointer;
 }
 .content-wrapper .input-fields #step-slider:hover::-webkit-slider-thumb {
-  background: #388e3c;
+  background: #11e0e0;
 }
 .content-wrapper .input-fields #step-slider:active::-webkit-slider-thumb {
-  background: #2e7d32;
+  background: #11e0e0;
 }
 .content-wrapper .input-fields .toggle-switch {
   appearance: none;
@@ -116,6 +131,12 @@ body {
   cursor: pointer;
   font-family: var(--font-nata-sans), serif;
 }
+.content-wrapper .timer-buttons button {
+  padding: 0;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
 .content-wrapper .action-buttons button {
   padding: 0;
   width: 100%;
@@ -125,24 +146,20 @@ body {
   font-size: 24px;
 }
 .content-wrapper .action-buttons .btn-secondary {
-  margin-top: 20px;
   font-size: 16px;
 }
 
 .count-value {
   text-align: center;
   font-size: 96px;
-  font-family: "Nata Sans", sans-serif;
 }
 
 .count-up {
   color: #4caf50;
-  /* Green */
 }
 
 .count-down {
   color: #f44336;
-  /* Red */
 }
 
 /*# sourceMappingURL=style.css.map */
