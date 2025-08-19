@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Counter</title>
+  <title>Smart Counter</title>
 
 
   <script src="https://jsuites.net/v4/jsuites.js"></script>
@@ -16,45 +16,47 @@
 </head>
 <body>
 
-<div class="content-wrapper text-center mt-4">
-  <div id="count" class="count-value fs-1 mb-3">0</div>
+<div>
+  <div class="content-wrapper text-center mt-4">
+    <div id="count" class="count-value fs-1 mb-3">0</div>
 
-  <div class="input-fields">
-    <div class="d-flex gap-2 justify-content-center align-items-center mb-3">
-      <label>
-        <input type="number" id="min-value" placeholder="Enter Minimum Value" min="0" />
-      </label>
-      <label>
-        <input type="number" id="max-value" placeholder="Enter Maximum Value" min="0" />
-      </label>
-    </div>
+    <div class="input-fields">
+      <div class="d-flex gap-2 justify-content-center align-items-center mb-3">
+        <label>
+          <input type="number" id="min-value" placeholder="Enter Minimum Value" min="0" />
+        </label>
+        <label>
+          <input type="number" id="max-value" placeholder="Enter Maximum Value" min="0" />
+        </label>
+      </div>
 
-    <div class="mb-5">
-      <label for="step-slider"></label><input type="range" id="step-slider" min="1" max="10" value="1" />
-      <div id="step-label">Step: 1</div>
-    </div>
+      <div class="mb-5">
+        <label for="step-slider"></label><input type="range" id="step-slider" min="1" max="10" value="1" />
+        <div id="step-label">Step: 1</div>
+      </div>
 
-    <div class="form-check d-flex align-items-center justify-content-between mt-2 mb-3 p-0">
-      <label for="save-settings" class="switch-label text-start">
-        Save values in Local Storage ?
-      </label>
-      <input type="checkbox" id="save-settings" class="toggle-switch" />
-    </div>
-    <div>OR</div>
-    <div class="form-check d-flex align-items-center justify-content-between mt-2 mb-3 p-0">
-      <label for="save-session" class="switch-label text-start">
-        Save values in Session Storage ?
-      </label>
-      <input type="checkbox" id="save-session" class="toggle-switch" />
-    </div>
+      <div class="form-check d-flex align-items-center justify-content-between mt-2 mb-3 p-0">
+        <label for="save-settings" class="switch-label text-start">
+          Save values in Local Storage ?
+        </label>
+        <input type="checkbox" id="save-settings" class="toggle-switch" />
+      </div>
+      <div>OR</div>
+      <div class="form-check d-flex align-items-center justify-content-between mt-2 mb-3 p-0">
+        <label for="save-session" class="switch-label text-start">
+          Save values in Session Storage ?
+        </label>
+        <input type="checkbox" id="save-session" class="toggle-switch" />
+      </div>
 
-  </div>
-  <div class="action-buttons mt-5">
-    <div class="d-flex gap-2 justify-content-center align-items-center">
-      <button id="increment" class="btn btn-success">+</button>
-      <button id="decrement" class="btn btn-danger">-</button>
     </div>
-    <button id="reset" class="btn btn-secondary">Reset</button>
+    <div class="action-buttons mt-5">
+      <div class="d-flex gap-2 justify-content-center align-items-center">
+        <button id="increment" class="btn btn-success">+</button>
+        <button id="decrement" class="btn btn-danger">-</button>
+      </div>
+      <button id="reset" class="btn btn-secondary">Reset</button>
+    </div>
   </div>
 </div>
 
