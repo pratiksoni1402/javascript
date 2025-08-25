@@ -19,18 +19,27 @@ body .app-heading h1 {
   font-family: var(--font-heading), serif;
 }
 body .counter {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 180px);
 }
 
 .content-wrapper {
   font-family: var(--font-body), serif;
   max-width: 450px;
 }
+.content-wrapper .count-value {
+  text-align: center;
+  font-size: 96px;
+}
+.content-wrapper .count-up {
+  color: #4caf50;
+}
+.content-wrapper .count-down {
+  color: #f44336;
+}
 .content-wrapper .input-fields {
   /* Base slider */
-  /* Track (line behind the thumb) */
-  /* Thumb (the draggable circle) */
-  /* Optional: active hover/focus effects */
+  /* Track  */
+  /* Thumb  */
   /* The slider circle */
   /* When checked */
   /* Optional: Label styling */
@@ -60,7 +69,6 @@ body .counter {
 }
 .content-wrapper .input-fields #step-slider {
   -webkit-appearance: none;
-  /* remove default Chrome/Safari style */
   appearance: none;
   width: 100%;
   height: 6px;
@@ -88,7 +96,6 @@ body .counter {
   background: teal;
   border: 2px solid white;
   margin-top: -6px;
-  /* aligns thumb with track */
   cursor: pointer;
 }
 .content-wrapper .input-fields #step-slider::-moz-range-thumb {
@@ -137,7 +144,7 @@ body .counter {
 .content-wrapper .input-fields .switch-label {
   font-size: 14px;
   cursor: pointer;
-  font-family: var(--font-nata-sans), serif;
+  font-family: var(--font-body), serif;
 }
 .content-wrapper .timer-buttons button {
   padding: 0;
@@ -149,19 +156,6 @@ body .counter {
   font-size: 16px;
   height: 40px;
   padding: 0;
-}
-
-.count-value {
-  text-align: center;
-  font-size: 96px;
-}
-
-.count-up {
-  color: #4caf50;
-}
-
-.count-down {
-  color: #f44336;
 }
 
 /*# sourceMappingURL=style.css.map */

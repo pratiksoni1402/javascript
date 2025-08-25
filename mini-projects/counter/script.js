@@ -1,29 +1,35 @@
 let count = 0;
 
+const displayCount = document.getElementById('count');
+
+const increaseCount = document.getElementById('increment');
+const decreaseCount = document.getElementById('decrement');
+const resetCount = document.getElementById('reset');
+
 const enableTimer = document.getElementById("enable-timer");
 const timerButtons = document.querySelector(".timer-buttons");
 const startTimer = document.getElementById("start-timer");
 const pauseTimer = document.getElementById("pause-timer");
 const stopTimer = document.getElementById("stop-timer");
-const displayCount = document.getElementById('count');
-const increaseCount = document.getElementById('increment');
-const decreaseCount = document.getElementById('decrement');
-const resetCount = document.getElementById('reset');
 
 const getMinValue = document.getElementById('min-value');
 const getMaxValue = document.getElementById('max-value');
+
 const stepSlider = document.getElementById('step-slider');
 const stepLabel = document.getElementById('step-label');
 
-const saveSettings = document.getElementById('save-settings'); // local
-const saveSession = document.getElementById('save-session');   // session
+const saveSettings = document.getElementById('save-settings');
+const saveSession = document.getElementById('save-session');
 
 let minValue = 0;
 let maxValue = Infinity;
 let stepValue = 1;
 let previousCount = count;
 
-// ---------- Utilities ----------
+let timerInterval = null;
+
+
+// UI update function
 function updateUi() {
   displayCount.textContent = count;
 
@@ -36,10 +42,12 @@ function updateUi() {
   previousCount = count;
 }
 
+// Stores the data as object
 function getDataObj() {
   return { count, minValue, maxValue, stepValue, checkStatus: true };
 }
 
+// Perform check which storage option is enabled
 function saveData() {
   if (saveSettings.checked) {
     localStorage.setItem("savedValues", JSON.stringify(getDataObj()));
@@ -54,6 +62,7 @@ function saveData() {
   }
 }
 
+// Load the data from storage if saved
 function loadData(storage) {
   const saved = JSON.parse(storage.getItem("savedValues"));
   if (saved && saved.checkStatus) {
@@ -72,7 +81,7 @@ function loadData(storage) {
   return false;
 }
 
-// ---------- Event Listeners ----------
+// Event listeners
 saveSettings.addEventListener("change", function () {
   if (this.checked) {
     saveSession.checked = false; // only one active
@@ -84,6 +93,7 @@ saveSettings.addEventListener("change", function () {
   }
 });
 
+// Event listeners
 saveSession.addEventListener("change", function () {
   if (this.checked) {
     saveSettings.checked = false; // only one active
@@ -107,10 +117,10 @@ function parseValue(input, fieldName) {
     alert(`${fieldName} value cannot be negative`);
     return null;
   }
-
   return val;
 }
 
+// Event listeners
 getMinValue.addEventListener("change", (e) => {
   const newMin = parseValue(e.target, "Minimum");
   minValue = newMin === null ? 0 : newMin;
@@ -120,6 +130,7 @@ getMinValue.addEventListener("change", (e) => {
   saveData();
 });
 
+// Event listeners
 getMaxValue.addEventListener("change", (e) => {
   const newMax = parseValue(e.target, "Maximum");
   maxValue = newMax === null ? Infinity : newMax;
@@ -128,6 +139,8 @@ getMaxValue.addEventListener("change", (e) => {
   saveData();
 });
 
+
+// Event listeners
 stepSlider.addEventListener("input", (e) => {
   stepValue = +e.target.value;
   stepLabel.textContent = `Increase count by: ${stepValue}`;
@@ -135,6 +148,7 @@ stepSlider.addEventListener("input", (e) => {
   saveData();
 });
 
+// Event listeners
 increaseCount.addEventListener("click", () => {
   if (count + stepValue <= maxValue) {
     count += stepValue;
@@ -143,6 +157,7 @@ increaseCount.addEventListener("click", () => {
   } else alert("Cannot increase count beyond maximum value");
 });
 
+// Event listeners
 decreaseCount.addEventListener("click", () => {
   if (count - stepValue >= minValue) {
     count -= stepValue;
@@ -151,13 +166,14 @@ decreaseCount.addEventListener("click", () => {
   } else alert("Cannot decrease count below minimum value");
 });
 
+// Event listeners
 resetCount.addEventListener("click", () => {
   count = minValue;
   updateUi();
   saveData();
 });
 
-// ---------- Setup Slider ----------
+// Range slider
 function setupSlider() {
   if (minValue >= 0 && maxValue > minValue && maxValue !== Infinity) {
     stepSlider.min = 1;
@@ -167,7 +183,7 @@ function setupSlider() {
   }
 }
 
-// ---------- Init ----------
+// Load the content when DOM is loaded
 window.addEventListener("DOMContentLoaded", () => {
   if (loadData(localStorage)) saveSettings.checked = true;
   else if (loadData(sessionStorage)) saveSession.checked = true;
@@ -176,9 +192,8 @@ window.addEventListener("DOMContentLoaded", () => {
   updateTimerButtons("idle"); // set buttons initially
 });
 
-let timerInterval = null;
 
-// ---------- Helper for Buttons ----------
+// Button enable/disable conditions
 function updateTimerButtons(state) {
   if (state === "idle") {
     startTimer.disabled = false;
@@ -195,7 +210,7 @@ function updateTimerButtons(state) {
   }
 }
 
-// ---------- Timer Mode Toggle ----------
+// Timer mode toggle switch
 enableTimer.addEventListener("change", function () {
   if (this.checked) {
     document.querySelector(".action-buttons").style.display = "none";
@@ -222,7 +237,7 @@ enableTimer.addEventListener("change", function () {
   }
 });
 
-// ---------- Timer functions ----------
+// Timer functions
 function startTimerFunc() {
   if (timerInterval) return;
   timerInterval = setInterval(() => {
@@ -236,12 +251,14 @@ function startTimerFunc() {
   updateTimerButtons("running");
 }
 
+// Pause the timer
 function pauseTimerFunc() {
   clearInterval(timerInterval);
   timerInterval = null;
   updateTimerButtons("paused");
 }
 
+// Stop the timer
 function stopTimerFunc() {
   clearInterval(timerInterval);
   timerInterval = null;
@@ -250,7 +267,7 @@ function stopTimerFunc() {
   updateTimerButtons("idle");
 }
 
-// ---------- Button Events ----------
+// Timer buttons
 startTimer.addEventListener("click", startTimerFunc);
 pauseTimer.addEventListener("click", pauseTimerFunc);
 stopTimer.addEventListener("click", stopTimerFunc);
