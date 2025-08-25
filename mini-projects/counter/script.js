@@ -95,7 +95,7 @@ saveSession.addEventListener("change", function () {
   }
 });
 
-// Handle Min Value
+// Handle Min/Max Value
 function parseValue(input, fieldName) {
   let val = input.value.trim();
 
@@ -113,13 +113,8 @@ function parseValue(input, fieldName) {
 
 getMinValue.addEventListener("change", (e) => {
   const newMin = parseValue(e.target, "Minimum");
-
-  // if null → empty input, reset to default
   minValue = newMin === null ? 0 : newMin;
-
-  // Adjust count if below min
   if (count < minValue) count = minValue;
-
   setupSlider();
   updateUi();
   saveData();
@@ -127,15 +122,11 @@ getMinValue.addEventListener("change", (e) => {
 
 getMaxValue.addEventListener("change", (e) => {
   const newMax = parseValue(e.target, "Maximum");
-
-  // if null → empty input, reset to Infinity
   maxValue = newMax === null ? Infinity : newMax;
-
   setupSlider();
   updateUi();
   saveData();
 });
-
 
 stepSlider.addEventListener("input", (e) => {
   stepValue = +e.target.value;
@@ -166,7 +157,6 @@ resetCount.addEventListener("click", () => {
   saveData();
 });
 
-
 // ---------- Setup Slider ----------
 function setupSlider() {
   if (minValue >= 0 && maxValue > minValue && maxValue !== Infinity) {
@@ -179,24 +169,38 @@ function setupSlider() {
 
 // ---------- Init ----------
 window.addEventListener("DOMContentLoaded", () => {
-  // Try local first, then session
   if (loadData(localStorage)) saveSettings.checked = true;
   else if (loadData(sessionStorage)) saveSession.checked = true;
 
   updateUi();
+  updateTimerButtons("idle"); // set buttons initially
 });
-
 
 let timerInterval = null;
 
-// Handle toggle
+// ---------- Helper for Buttons ----------
+function updateTimerButtons(state) {
+  if (state === "idle") {
+    startTimer.disabled = false;
+    pauseTimer.disabled = true;
+    stopTimer.disabled = true;
+  } else if (state === "running") {
+    startTimer.disabled = true;
+    pauseTimer.disabled = false;
+    stopTimer.disabled = false;
+  } else if (state === "paused") {
+    startTimer.disabled = false;
+    pauseTimer.disabled = true;
+    stopTimer.disabled = false;
+  }
+}
+
+// ---------- Timer Mode Toggle ----------
 enableTimer.addEventListener("change", function () {
   if (this.checked) {
-    // Hide + - buttons, show timer buttons
     document.querySelector(".action-buttons").style.display = "none";
     timerButtons.style.display = "block";
 
-    // Disable local/session storage
     saveSettings.disabled = true;
     saveSession.disabled = true;
     saveSettings.checked = false;
@@ -205,46 +209,48 @@ enableTimer.addEventListener("change", function () {
     sessionStorage.removeItem("savedValues");
 
     jSuites.notification({ message: "Timer Mode Enabled" });
+    updateTimerButtons("idle");
   } else {
-    // Show + - buttons, hide timer buttons
     document.querySelector(".action-buttons").style.display = "block";
     timerButtons.style.display = "none";
 
-    // Enable storage options back
     saveSettings.disabled = false;
     saveSession.disabled = false;
 
-    stopTimerFunc(); // reset timer
+    stopTimerFunc();
     jSuites.notification({ message: "Timer Mode Disabled" });
   }
 });
 
-// Timer functions
+// ---------- Timer functions ----------
 function startTimerFunc() {
-  if (timerInterval) return; // already running
+  if (timerInterval) return;
   timerInterval = setInterval(() => {
     if (count + stepValue <= maxValue) {
       count += stepValue;
       updateUi();
     } else {
-      stopTimerFunc(); // stop when reaching max
+      stopTimerFunc();
     }
-  }, 1000); // 1 sec interval
+  }, 1000);
+  updateTimerButtons("running");
 }
 
 function pauseTimerFunc() {
   clearInterval(timerInterval);
   timerInterval = null;
+  updateTimerButtons("paused");
 }
 
 function stopTimerFunc() {
   clearInterval(timerInterval);
   timerInterval = null;
-  count = minValue; // reset to min
+  count = minValue;
   updateUi();
+  updateTimerButtons("idle");
 }
 
-// Button events
+// ---------- Button Events ----------
 startTimer.addEventListener("click", startTimerFunc);
 pauseTimer.addEventListener("click", pauseTimerFunc);
 stopTimer.addEventListener("click", stopTimerFunc);

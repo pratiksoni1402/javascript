@@ -15,14 +15,15 @@ html {
 body {
   background: var(--background);
 }
-
-.counter {
-  min-height: calc(100vh - 100px);
+body .app-heading h1 {
+  font-family: var(--font-heading), serif;
+}
+body .counter {
+  min-height: calc(100vh - 170px);
 }
 
 .content-wrapper {
   font-family: var(--font-body), serif;
-  padding: 0 20px;
   max-width: 450px;
 }
 .content-wrapper .input-fields {
@@ -136,7 +137,7 @@ body {
 .content-wrapper .input-fields .switch-label {
   font-size: 14px;
   cursor: pointer;
-  font-family: var(--font-body), serif;
+  font-family: var(--font-nata-sans), serif;
 }
 .content-wrapper .timer-buttons button {
   padding: 0;
@@ -144,18 +145,10 @@ body {
   height: 40px;
   font-size: 16px;
 }
-.content-wrapper .action-buttons button {
-  padding: 0;
-  width: 100%;
-  height: 40px;
-}
 .content-wrapper .action-buttons .btn {
-  font-size: 24px;
-  height: 40px; /* Ensure consistent height */
-  padding: 0;
-}
-.content-wrapper .action-buttons .btn-secondary {
   font-size: 16px;
+  height: 40px;
+  padding: 0;
 }
 
 .count-value {

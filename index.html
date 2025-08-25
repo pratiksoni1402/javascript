@@ -16,9 +16,13 @@
 
 </head>
 <body>
+<div class="app-heading">
+  <h1 class="text-center pt-3">Smart Counter</h1>
+</div>
 <div class="counter d-flex align-items-center justify-content-center">
 <div class="container">
   <div class="content-wrapper text-center mt-4 mx-auto">
+
     <div id="count" class="count-value fs-1 mb-3">0</div>
 
     <div class="input-fields">
@@ -65,13 +69,13 @@
     </div>
     <div class="action-buttons mt-4">
       <div class="row g-2 justify-content-center">
-        <div class="col-4">
-          <button id="increment" class="btn btn-success w-100">+</button>
+        <div class="col-sm-6 col-6">
+          <button id="increment" class="btn btn-success w-100">Increase</button>
         </div>
-        <div class="col-4">
-          <button id="decrement" class="btn btn-danger w-100">-</button>
+        <div class="col-sm-6 col-6">
+          <button id="decrement" class="btn btn-danger w-100">Decrease</button>
         </div>
-        <div class="col-4">
+        <div class="col-sm-4 col-12">
           <button id="reset" class="btn btn-secondary w-100">Reset</button>
         </div>
       </div>
@@ -80,15 +84,21 @@
 
 
     <div class="timer-buttons mt-4" style="display: none;">
-      <div class="d-flex gap-2 justify-content-center align-items-center">
-        <button id="start-timer" class="btn btn-success w-100">Start</button>
-        <button id="pause-timer" class="btn btn-warning w-100">Pause</button>
-        <button id="stop-timer" class="btn btn-danger w-100">Stop</button>
+      <div class="row g-2 justify-content-center align-items-center">
+        <div class="col-sm-4 col-6">
+          <button id="start-timer" class="btn btn-success w-100">Start</button>
+        </div>
+        <div class="col-sm-4 col-6">
+          <button id="pause-timer" class="btn btn-warning w-100">Pause</button>
+        </div>
+        <div class="col-sm-4 col-12">
+          <button id="stop-timer" class="btn btn-danger w-100">Stop</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</div>>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="./mini-projects/counter/script.js"></script>
