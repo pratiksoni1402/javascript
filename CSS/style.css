@@ -51,6 +51,8 @@ body .counter {
 }
 .content-wrapper .input-fields label {
   width: 100%;
+  font-size: 14px;
+  font-family: var(--font-body), serif;
 }
 .content-wrapper .input-fields label input[type=number] {
   padding: 0 8px;
